@@ -3,6 +3,9 @@ function setup() {
   createCanvas(640, 480);
 }
 
+let height = prompt("How tall should the circle be?");
+let width = prompt("How wide should the circule be?");
+
 function draw() {
   // put drawing code here
   if (mouseIsPressed) {
@@ -10,5 +13,5 @@ function draw() {
   } else {
     fill(255);
   }
-  ellipse(mouseX, mouseY, 80, 80);
+  ellipse(mouseX, mouseY, width, height);
 }
