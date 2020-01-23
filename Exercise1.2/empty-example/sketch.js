@@ -9,9 +9,9 @@ let width = prompt("How wide should the circule be?");
 function draw() {
   // put drawing code here
   if (mouseIsPressed) {
-    fill(0);
+    fill(230);
   } else {
-    fill(255);
+    clear();
   }
   ellipse(mouseX, mouseY, width, height);
 }
