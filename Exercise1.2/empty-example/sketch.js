@@ -10,8 +10,8 @@ function draw() {
   // put drawing code here
   if (mouseIsPressed) {
     fill(230);
+    ellipse(mouseX, mouseY, width, height);
   } else {
-    clear();
+    noFill();
   }
-  ellipse(mouseX, mouseY, width, height);
 }
