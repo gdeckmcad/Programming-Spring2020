@@ -5,6 +5,7 @@ function setup() {
 
 let nose = prompt("What color nose should the snow creature have", "orange");
 let hat = prompt("What color hat should the snow creature be wearing?", "red");
+let pet = prompt("What color pet shoudl the snow creature have?", "pink");
 
 function draw() {
   // snowman legs
@@ -46,4 +47,18 @@ function draw() {
   strokeWeight(10);
   line(350, 400, 250, 300);
   line(650, 400, 750, 300);
+  //snow pet
+  fill(pet);
+  stroke("#666");
+  strokeWeight(10);
+  ellipse(890, 420, 50);
+  ellipse(825, 420, 50);
+  ellipse(850, 500, 150);
+  fill("fff");
+  stroke(0);
+  strokeWeight(10);
+  ellipse(825, 490, 25);
+  ellipse(850, 490, 25);
+  noFill();
+  arc(850, 500, 80, 80, 0, HALF_PI);
 }
