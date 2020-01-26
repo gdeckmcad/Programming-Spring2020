@@ -3,28 +3,30 @@ function setup() {
     background ("#eee");
 }
 
-//let height = prompt("How tall should the circle be?", "placeholder");
-//let width = prompt("How wide should the circule be?", "placeholder");
+let nose = prompt("What color nose should the snow creature have", "orange");
+let hat = prompt("What color hat should the snow creature be wearing?", "red");
 
 function draw() {
   // snowman legs
   fill("#fff");
   stroke("#666");
-  strokeWeight(20);
+  strokeWeight(10);
   //left left
-  ellipse(350, 650, 200);
+  ellipse(350, 650, 150);
   //right leg
-  ellipse(650, 650, 200);
+  ellipse(650, 650, 150);
   //body
   ellipse(500, 450, 350, 400);
   //head
   ellipse(500, 200,250);
   //hat brim
-  stroke(100, 100, 255);
-  strokeWeight(40);
-  line(400, 120, 600, 120);
+  stroke(hat);
+  strokeWeight(30);
+  line(375, 120, 625, 120);
   //hat body
-  quad(400, 50, 600, 50, 550, 120, 450, 120);
+  noStroke();
+  fill(hat);
+  quad(350, 30, 650, 30, 575, 120, 425, 120);
   // eyes
   fill("fff");
   stroke(0);
@@ -34,6 +36,14 @@ function draw() {
   // mouth
   noFill();
   strokeWeight(10);
-  //triangle(475, 64, 80, 80, 0);
-  arc(500, 250, 80, 80, 0, PI);
+  arc(500, 250, 80, 80, 0, HALF_PI);
+  // nose
+  noStroke();
+  fill(nose);
+  triangle(375, 300, 500, 190, 520, 220);
+  //arms
+  stroke("#666");
+  strokeWeight(10);
+  line(350, 400, 250, 300);
+  line(650, 400, 750, 300);
 }
