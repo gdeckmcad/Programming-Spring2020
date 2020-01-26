@@ -3,7 +3,7 @@ function setup() {
     background ("#eee");
 }
 
-let nose = prompt("What color nose should the snow creature have", "orange");
+let nose = prompt("What color nose should the snow creature have?", "orange");
 let hat = prompt("What color hat should the snow creature be wearing?", "red");
 let pet = prompt("What color pet should the snow creature have?", "pink");
 
