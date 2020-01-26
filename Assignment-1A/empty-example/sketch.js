@@ -5,9 +5,17 @@ function setup() {
 
 let nose = prompt("What color nose should the snow creature have", "orange");
 let hat = prompt("What color hat should the snow creature be wearing?", "red");
-let pet = prompt("What color pet shoudl the snow creature have?", "pink");
+let pet = prompt("What color pet should the snow creature have?", "pink");
 
 function draw() {
+  //hillside landscape
+  noFill();
+  stroke("#90ee90");
+  strokeWeight(20);
+  arc(200, 300, 300, 300, radians(225), radians(325));
+  arc(150, 550, 125, 125, radians(225), radians(325));
+  arc(800, 200, 150, 150, radians(225), radians(325));
+  arc(925, 800, 450, 450, radians(225), radians(325));
   // snowman legs
   fill("#fff");
   stroke("#666");
