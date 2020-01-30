@@ -1,0 +1,23 @@
+{
+  "name": "Programming-Spring2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gdeckmcad/Programming-Spring2020.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gdeckmcad/Programming-Spring2020/issues"
+  },
+  "homepage": "https://github.com/gdeckmcad/Programming-Spring2020#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}
