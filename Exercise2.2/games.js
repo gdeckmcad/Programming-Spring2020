@@ -6,11 +6,11 @@ const games = [
 ];
 
 //Prompt user to select a random number
-let randomIdx = prompt('I have 3 games in my collection. Pick a number between 0 and 2 and I will tell you about that game');
+let randomIdx = prompt('I have 3 games in my collection. Pick a number between 1 and 3 and I will tell you about that game');
 
-if (randomIdx > 2) {
-    window.alert('Please choose a number between 0 and 2');
+if (randomIdx > 3) {
+    window.alert('Please choose a number between 1 and 3');
 } else {
-    console.log('You selected' + ' ' + games[randomIdx].name + ', ' + 'which is a' + ' ' + games[randomIdx].type + ' ' + 'that has a rating of' + ' ' + games[randomIdx].rating + ' ' + 'and that needs at least' + ' ' + games[randomIdx].numberOfPlayers + ' ' + 'players' + '.');
-    window.alert ('You selected' + ' ' + games[randomIdx].name + ', ' + 'which is a' + ' ' + games[randomIdx].type + ' ' + 'that has a rating of' + ' ' + games[randomIdx].rating + ' ' + 'and that needs at least' + ' ' + games[randomIdx].numberOfPlayers + ' ' + 'players' + '.')
+    console.log('You selected' + ' ' + games[randomIdx - 1].name + ', ' + 'which is a' + ' ' + games[randomIdx - 1].type + ' ' + 'that has a rating of' + ' ' + games[randomIdx - 1].rating + ' ' + 'and that needs at least' + ' ' + games[randomIdx -1].numberOfPlayers + ' ' + 'players' + '.');
+    window.alert ('You selected' + ' ' + games[randomIdx - 1].name + ', ' + 'which is a' + ' ' + games[randomIdx - 1].type + ' ' + 'that has a rating of' + ' ' + games[randomIdx -1].rating + ' ' + 'and that needs at least' + ' ' + games[randomIdx - 1].numberOfPlayers + ' ' + 'players' + '.')
 }
