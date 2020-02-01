@@ -10,3 +10,8 @@ const questionArray = [
 //A random question prompt should appear when the page loads. The question prompt should include the value of the question. The user will respond with their guess.
 const randomQuestion = Math.round(Math.random() * questionArray.length-1);
 const firstQuestion = window.prompt(questionArray[randomQuestion].question);
+const firstAnswer = questionArray[randomQuestion].answer;
+
+//Do not check the answer yet. Just fire an alert combining "You answered " and then the response and then add " The correct answer was " and then display the answer property from the object. Use concatenation to string all these strings together.
+
+console.log('firstAnswer');
