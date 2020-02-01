@@ -8,11 +8,5 @@ const questionArray = [
 ];
 
 //A random question prompt should appear when the page loads. The question prompt should include the value of the question. The user will respond with their guess.
-let randomIdx = prompt('I have 3 games in my collection. Pick a number between 1 and 3 and I will tell you about that game');
-
-if (randomIdx > 3) {
-    window.alert('Please choose a number between 1 and 3');
-} else {
-    console.log('You selected' + ' ' + games[randomIdx - 1].name + ', ' + 'which is a' + ' ' + games[randomIdx - 1].type + ' ' + 'that has a rating of' + ' ' + games[randomIdx - 1].rating + ' ' + 'and that needs at least' + ' ' + games[randomIdx -1].numberOfPlayers + ' ' + 'players' + '.');
-    window.alert ('You selected' + ' ' + games[randomIdx - 1].name + ', ' + 'which is a' + ' ' + games[randomIdx - 1].type + ' ' + 'that has a rating of' + ' ' + games[randomIdx -1].rating + ' ' + 'and that needs at least' + ' ' + games[randomIdx - 1].numberOfPlayers + ' ' + 'players' + '.')
-}
+const randomQuestion = Math.round(Math.random() * questionArray.length-1);
+const firstQuestion = window.prompt(questionArray[randomQuestion].question);
