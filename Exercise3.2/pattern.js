@@ -25,7 +25,7 @@ function createTile(originX, originY, primaryColor, secondaryColor) {
     circle(100, 150, 75);
 }
 
-/*function draw() {
+function draw() {
     createTile(0,0, '#D5AC4E', '#7E231D');
     createTile(0, 200, '#7E231D', '#D5AC4E'); //opposite
     createTile(0, 200, '#D5AC4E', '#7E231D');
@@ -38,14 +38,15 @@ function createTile(originX, originY, primaryColor, secondaryColor) {
     createTile(0, 200, '#7E231D', '#D5AC4E'); //opposite
     createTile(0, 200, '#D5AC4E', '#7E231D');
     
-}*/
+}
 
-function draw() {
+/*function draw() {
     background(255);
-    for (var y = 0; y < height+200; y += 200) {
-        createTile(0, y, '#D5AC4E', '#7E231D');
-    for (var x = 0; x < width+200; x += 200) {
-        createTile(x, 200, '#7E231D', '#D5AC4E');
+    for (let y = 0; y < 400; y += 200) {
+        for (let x = 0; x < 400; x += 200) {
+        createTile(x, 0, '#D5AC4E', '#7E231D');
+        createTile(0, y, '#7E231D', '#D5AC4E');
     }
 }
-}
+
+}*/
