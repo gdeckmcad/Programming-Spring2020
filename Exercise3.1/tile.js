@@ -30,5 +30,5 @@ function createTile() {
 //Wrap your entire ‘drawing’ with a function, so that you would have blank canvas unless you called your function. Call your pattern function in the draw function. Use the noLoop method to stop the draw loop.
 function draw() {
     createTile();
-    //noLoop();
+    noLoop();
 }
