@@ -29,5 +29,13 @@ function draw() {
     createTile(0,0, '#D5AC4E', '#7E231D');
     createTile(0, 200, 'green', 'white');
     createTile(0, 200, 'blue', 'yellow');
+    
     createTile(200, -400, 'purple', 'blue');
+    createTile(0, 200, 'green', 'white');
+    createTile(0, 200, 'blue', 'yellow');
+   
+    createTile(200, -400, 'purple', 'blue');
+    createTile(0, 200, 'green', 'white');
+    createTile(0, 200, 'blue', 'yellow');
+    
 }
