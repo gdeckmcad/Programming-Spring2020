@@ -27,15 +27,15 @@ function createTile(originX, originY, primaryColor, secondaryColor) {
 
 function draw() {
     createTile(0,0, '#D5AC4E', '#7E231D');
-    createTile(0, 200, '#7E231D', '#D5AC4E'); //opposite
+    createTile(0, 200, 'white', '#D5AC4E'); //opposite
     createTile(0, 200, '#D5AC4E', '#7E231D');
     
-    createTile(200, -400, '#7E231D', '#D5AC4E'); //opposite
+    createTile(200, -400, 'white', '#D5AC4E'); //opposite
     createTile(0, 200, '#D5AC4E', '#7E231D');
-    createTile(0, 200, '#7E231D', '#D5AC4E'); //opposite
+    createTile(0, 200, 'white', '#D5AC4E'); //opposite
    
     createTile(200, -400, '#D5AC4E', '#7E231D');
-    createTile(0, 200, '#7E231D', '#D5AC4E'); //opposite
+    createTile(0, 200, 'white', '#D5AC4E'); //opposite
     createTile(0, 200, '#D5AC4E', '#7E231D');
     
 }
