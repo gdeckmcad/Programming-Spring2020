@@ -25,17 +25,27 @@ function createTile(originX, originY, primaryColor, secondaryColor) {
     circle(100, 150, 75);
 }
 
-function draw() {
+/*function draw() {
     createTile(0,0, '#D5AC4E', '#7E231D');
-    createTile(0, 200, 'green', 'white');
-    createTile(0, 200, 'blue', 'yellow');
+    createTile(0, 200, '#7E231D', '#D5AC4E'); //opposite
+    createTile(0, 200, '#D5AC4E', '#7E231D');
     
-    createTile(200, -400, 'purple', 'blue');
-    createTile(0, 200, 'green', 'white');
-    createTile(0, 200, 'blue', 'yellow');
+    createTile(200, -400, '#7E231D', '#D5AC4E'); //opposite
+    createTile(0, 200, '#D5AC4E', '#7E231D');
+    createTile(0, 200, '#7E231D', '#D5AC4E'); //opposite
    
-    createTile(200, -400, 'purple', 'blue');
-    createTile(0, 200, 'green', 'white');
-    createTile(0, 200, 'blue', 'yellow');
+    createTile(200, -400, '#D5AC4E', '#7E231D');
+    createTile(0, 200, '#7E231D', '#D5AC4E'); //opposite
+    createTile(0, 200, '#D5AC4E', '#7E231D');
     
+}*/
+
+function draw() {
+    background(255);
+    for (var y = 0; y < height+200; y += 200) {
+        createTile(0, y, '#D5AC4E', '#7E231D');
+    for (var x = 0; x < width+200; x += 200) {
+        createTile(x, 200, '#7E231D', '#D5AC4E');
+    }
+}
 }
