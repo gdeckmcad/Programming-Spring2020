@@ -3,7 +3,6 @@ let heading;
 let submit;
 let reset;
 let input;
-
 let questionInput;
 let currentQuestion;
 let response;
@@ -16,6 +15,7 @@ let statements = [
 {question: 'How many great lakes are there?', answer:'Five'},
 ]
 
+//alerting user they won the quiz
 function next () {
     if(statements.length < 1) {
         alert('you won');
@@ -28,6 +28,7 @@ function next () {
 currentQuestion = next();
 let message = currentQuestion.question;
 
+//displaying question above input
 function draw () {
     background('#D0FEF5');
     textSize(14);
@@ -41,18 +42,26 @@ function checkQuestion() {
         statements = statements.filter(statementsObj => {
             return currentQuestion.answer !== statementsObj.answer;
         });
+        //this is the correct condition
+        response = 'You got it right!';
+        responseColor = 'green';
+    } else {
+        response = 'oops, that wasn\'t quite right! Try another';
+        responseColor = 'red';
     }
 }
- 
+
+//displaying 
 function sayMessage(){
     message = input.value();
     input.value('');
 }
 
+//styling and dom elements
 function setup () {
     createCanvas(800, 600);
     background('#D0FEF5');
-    heading = createElement('h1', 'Graces Quiz Game');
+    heading = createElement('h1', 'Grace\'s Quiz Game');
     heading.position(100, 200);
     submit = createButton('Submit');
     submit.size(100,32);
@@ -66,20 +75,3 @@ function setup () {
     reset.position(100, 375);
     reset.mousePressed('');
 }
-
-
-/*const questionArray = [
-    {question: 'Where is the Great Pyramid of Giza?', answer:'Egypt'},
-    {question: 'Which planet in our Solar System is known for having a ring?', answer:'Saturn'},
-    {question: 'What kind of tree do acorns come from?', answer:'Oak'},
-    {question: 'What is the part of the human eye that controls the amount of light that passes through the pupil?', answer:'the iris'},
-    {question: 'How many great lakes are there?', answer:'Five'},
-];
-
-
-const randomQuestion = Math.round(Math.random() * questionArray.length-1);
-const firstQuestion = window.prompt(questionArray[randomQuestion].question);
-const firstAnswer = questionArray[randomQuestion].answer;
-const userFirstAnswer = firstQuestion;
-
-window.alert('You answered' + ' ' + userFirstAnswer + '.' + ' ' + 'The correct answer was' + ' ' + firstAnswer); */
