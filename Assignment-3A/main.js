@@ -1,6 +1,13 @@
+
 let heading;
 let button;
-let inputField;
+let input;
+let message = 'type something';
+
+function sayMessage(){
+    message = input.value();
+    input.value('');
+}
 
 function setup () {
     createCanvas(800, 600);
@@ -9,11 +16,21 @@ function setup () {
     heading.position(100, 200);
     button = createButton('submit');
     button.size(100,16);
-    button.position(100, 350);
+    button.position(100, 300);
+    button.mousePressed(sayMessage);
+    input = createInput('');
+    input.position(100, 275);
+}
+
+function draw () {
+    background('#D0FEF5');
+    textSize(18);
+    fill('#4A051C');
+    text(message, 100, 400);
 }
 
 
-const questionArray = [
+/*const questionArray = [
     {question: 'Where is the Great Pyramid of Giza?', answer:'Egypt'},
     {question: 'Which planet in our Solar System is known for having a ring?', answer:'Saturn'},
     {question: 'What kind of tree do acorns come from?', answer:'Oak'},
@@ -22,10 +39,9 @@ const questionArray = [
 ];
 
 
-/*const randomQuestion = Math.round(Math.random() * questionArray.length-1);
+const randomQuestion = Math.round(Math.random() * questionArray.length-1);
 const firstQuestion = window.prompt(questionArray[randomQuestion].question);
 const firstAnswer = questionArray[randomQuestion].answer;
 const userFirstAnswer = firstQuestion;
-
 
 window.alert('You answered' + ' ' + userFirstAnswer + '.' + ' ' + 'The correct answer was' + ' ' + firstAnswer); */
