@@ -1,3 +1,17 @@
+let heading;
+let button;
+let inputField;
+
+function setup () {
+    createCanvas(800, 600);
+    background('#D0FEF5');
+    heading = createElement('h1', 'Graces Quiz Game');
+    heading.position(100, 200);
+    button = createButton('submit');
+    button.size(100,16);
+    button.position(100, 350);
+}
+
 
 const questionArray = [
     {question: 'Where is the Great Pyramid of Giza?', answer:'Egypt'},
@@ -8,10 +22,10 @@ const questionArray = [
 ];
 
 
-const randomQuestion = Math.round(Math.random() * questionArray.length-1);
+/*const randomQuestion = Math.round(Math.random() * questionArray.length-1);
 const firstQuestion = window.prompt(questionArray[randomQuestion].question);
 const firstAnswer = questionArray[randomQuestion].answer;
 const userFirstAnswer = firstQuestion;
 
 
-//window.alert('You answered' + ' ' + userFirstAnswer + '.' + ' ' + 'The correct answer was' + ' ' + firstAnswer);
+window.alert('You answered' + ' ' + userFirstAnswer + '.' + ' ' + 'The correct answer was' + ' ' + firstAnswer); */
