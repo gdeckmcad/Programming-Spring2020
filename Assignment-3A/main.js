@@ -1,9 +1,49 @@
 
 let heading;
-let button;
+let submit;
+let reset;
 let input;
-let message = 'type something';
 
+let questionInput;
+let currentQuestion;
+let response;
+let responseColor = '#52FFB8';
+let statements = [
+{question: 'Where is the Great Pyramid of Giza?', answer:'Egypt'},
+{question: 'Which planet in our Solar System is known for having a ring?', answer:'Saturn'},
+{question: 'What kind of tree do acorns come from?', answer:'Oak'},
+{question: 'What is the part of the human eye that controls the amount of light that passes through the pupil?', answer:'the iris'},
+{question: 'How many great lakes are there?', answer:'Five'},
+]
+
+function next () {
+    if(statements.length < 1) {
+        alert('you won');
+        return;
+    }
+    const randomIndex = Math.ceil(Math.random() * statements.length - 1);
+    return statements[randomIndex];
+}
+
+currentQuestion = next();
+let message = currentQuestion.question;
+
+function draw () {
+    background('#D0FEF5');
+    textSize(14);
+    fill('#4A051C');
+    text(message, 100, 300);
+}
+
+function checkQuestion() {
+    if (currentQuestion.answer === input.value()) {
+        //remove correct answer from array
+        statements = statements.filter(statementsObj => {
+            return currentQuestion.answer !== statementsObj.answer;
+        });
+    }
+}
+ 
 function sayMessage(){
     message = input.value();
     input.value('');
@@ -14,19 +54,17 @@ function setup () {
     background('#D0FEF5');
     heading = createElement('h1', 'Graces Quiz Game');
     heading.position(100, 200);
-    button = createButton('submit');
-    button.size(100,16);
-    button.position(100, 300);
-    button.mousePressed(sayMessage);
+    submit = createButton('Submit');
+    submit.size(100,32);
+    submit.position(450, 375);
+    submit.mousePressed(sayMessage);
     input = createInput('');
-    input.position(100, 275);
-}
-
-function draw () {
-    background('#D0FEF5');
-    textSize(18);
-    fill('#4A051C');
-    text(message, 100, 400);
+    input.size(450, 32)
+    input.position(100, 325);
+    reset = createButton('Start over');
+    reset.size(100,32);
+    reset.position(100, 375);
+    reset.mousePressed('');
 }
 
 
