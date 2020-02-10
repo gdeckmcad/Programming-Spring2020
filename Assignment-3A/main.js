@@ -85,5 +85,4 @@ function setup () {
     reset = createButton('Start over');
     reset.size(100,32);
     reset.position(100, 375);
-    reset.mousePressed(reset);
 }
