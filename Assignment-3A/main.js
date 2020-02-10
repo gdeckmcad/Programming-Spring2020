@@ -84,6 +84,6 @@ function setup () {
     reset = createButton('Start over');
     reset.size(100,32);
     reset.position(100, 375);
-    link = createA("https://gdeck.studio.mcad.edu/programming-for-web/Assignment-3A/index.html");
+    link = createA("https://gdeck.studio.mcad.edu/programming-for-web/Assignment-3A/index.html", "Refresh quiz", "_self");
     reset.mousePressed(link);
 }
