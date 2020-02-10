@@ -15,22 +15,6 @@ let statements = [
 {question: 'How many great lakes are there?', answer:'five'},
 ]
 
-//alerting user they won the quiz
-function next () {
-    if(statements.length < 1) {
-        alert('Congratulations! You got all five questions correct!');
-        return;
-    }
-
-    if(wrongAnswer > 4) {
-        alert('Sorry you lost, you had too many wrong answers');
-        return;
-    }
-    const randomIndex = Math.ceil(Math.random() * statements.length - 1);
-    return statements[randomIndex];
-}
-
-
 currentQuestion = next();
 let message = currentQuestion.question;
 
@@ -67,6 +51,21 @@ function checkQuestion() {
     }
 }
 
+//alerting user they won the quiz
+function next () {
+    if(statements.length < 1) {
+        alert('Congratulations! You got all five questions correct!');
+        return;
+    }
+
+    if(wrongAnswer > 4) {
+        alert('Sorry you lost, you had too many wrong answers');
+        return;
+    }
+    const randomIndex = Math.ceil(Math.random() * statements.length - 1);
+    return statements[randomIndex];
+}
+
 //styling and dom elements
 function setup () {
     createCanvas(800, 600);
@@ -85,4 +84,6 @@ function setup () {
     reset = createButton('Start over');
     reset.size(100,32);
     reset.position(100, 375);
+    link = createA("https://gdeck.studio.mcad.edu/programming-for-web/Assignment-3A/index.html");
+    reset.mousePressed(link);
 }
