@@ -1,12 +1,12 @@
-
 let heading;
 let submit;
 let reset;
 let input;
 let currentQuestion;
 let response;
+let responseColor = "green";
 let description;
-let responseColor;
+let wrongAnswer = 0;
 let statements = [
 {question: 'Where is the Great Pyramid of Giza?', answer:'egypt'},
 {question: 'Which planet in our Solar System is known for having a ring?', answer:'saturn'},
@@ -19,6 +19,11 @@ let statements = [
 function next () {
     if(statements.length < 1) {
         alert('Congratulations! You got all five questions correct!');
+        return;
+    }
+
+    if(wrongAnswer > 4) {
+        alert('Sorry you lost, you had too many wrong answers');
         return;
     }
     const randomIndex = Math.ceil(Math.random() * statements.length - 1);
@@ -53,7 +58,7 @@ function checkQuestion() {
         //this is the wrong answer condition
         response = 'Oops, that wasn\'t quite right! Try another question';
         responseColor = 'red';
-        wrongAnswer = 
+        wrongAnswer = wrongAnswer + 1;
     }
     currentQuestion = next(); 
     input.value('')
@@ -62,9 +67,10 @@ function checkQuestion() {
     }
 }
 
-function refresh() {
-    clear();
+/*function reset(){
+
 }
+*/ 
 
 //styling and dom elements
 function setup () {
@@ -84,5 +90,5 @@ function setup () {
     reset = createButton('Start over');
     reset.size(100,32);
     reset.position(100, 375);
-    reset.mousePressed(refresh);
+    reset.mousePressed(reset);
 }
