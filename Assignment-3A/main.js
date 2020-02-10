@@ -7,6 +7,7 @@ let response;
 let responseColor = "green";
 let description;
 let wrongAnswer = 0;
+let correctAnswer = 0;
 let statements = [
 {question: 'Where is the Great Pyramid of Giza?', answer:'egypt'},
 {question: 'Which planet in our Solar System is known for having a ring?', answer:'saturn'},
@@ -26,6 +27,8 @@ function draw () {
     text(message, 100, 310);
     fill(responseColor);
     text(response, 100, 450);
+    text('Correct answers:' + ' ' + correctAnswer, 100, 470);
+    text('Wrong answers' + ' ' + wrongAnswer, 100, 490);
 }
 
 //validating answers, and filtering out correctly answered questions and grabbing a new one
@@ -36,13 +39,14 @@ function checkQuestion() {
             return currentQuestion.answer !== statementsObj.answer;
         });
         //this is the correct condition
+        correctAnswer = correctAnswer + 1;
         response = 'You got it right!';
         responseColor = 'green';
     } else {
         //this is the wrong answer condition
+        wrongAnswer = wrongAnswer + 1;
         response = 'Oops, that wasn\'t quite right! Try another question';
         responseColor = 'red';
-        wrongAnswer = wrongAnswer + 1;
     }
     currentQuestion = next(); 
     input.value('')
