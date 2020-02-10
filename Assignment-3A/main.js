@@ -67,11 +67,6 @@ function checkQuestion() {
     }
 }
 
-/*function reset(){
-
-}
-*/ 
-
 //styling and dom elements
 function setup () {
     createCanvas(800, 600);
