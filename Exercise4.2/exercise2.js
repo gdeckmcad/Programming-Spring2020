@@ -3,5 +3,11 @@ function setup () {
 }
 
 function draw () {
-    background('chocolate');
+    background(155);
+    drawShape();
+}
+
+function drawShape () {
+    fill('purple');
+    rec(30, 30, 75, 75);
 }
