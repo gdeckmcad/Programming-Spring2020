@@ -1,3 +1,8 @@
+let rectX = 0;
+let rectY = 0;
+let rectWidth = 75;
+let rectHeight = 75;
+
 function setup() {
     createCanvas(500, 500);
 }
@@ -5,15 +10,16 @@ function setup() {
 function draw() {
     background('SlateGray');
     drawShape();
+    rectX += 2;
 }
 
 function mousePressed() {
-    if((mouseX >= 0 && mouseX <= 75) && (mouseY >= 0 && mouseY <= 75)) {
+    if((mouseX >= 0 && mouseX <= rectX + rectWidth) && (mouseY >= 0 && mouseY <= rectY + rectHeight)) {
         console.log('hit');
     }
 }
 
 function drawShape() {
     fill('SkyBlue');
-    rect(0, 0, 75, 75);
+    rect(rectX, rectY, rectWidth, rectHeight);
 }
