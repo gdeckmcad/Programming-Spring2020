@@ -14,7 +14,7 @@ function draw() {
     rectX += 2;
     if(rectX > width) {
         noLoop();
-        text('Your score was ' + clickCount, 250, 250);
+        text('Your score was ' + clickCount, 175, 175);
     }
 }
 
