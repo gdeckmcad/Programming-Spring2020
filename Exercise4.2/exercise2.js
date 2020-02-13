@@ -3,11 +3,17 @@ function setup() {
 }
 
 function draw() {
-    background(155);
+    background('SlateGray');
     drawShape();
 }
 
+function mousePressed() {
+    if((mouseX >= 0 && mouseX <= 75) && (mouseY >= 0 && mouseY <= 75)) {
+        console.log('hit');
+    }
+}
+
 function drawShape() {
-    fill('purple');
+    fill('SkyBlue');
     rect(0, 0, 75, 75);
 }
