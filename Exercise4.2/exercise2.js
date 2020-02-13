@@ -12,6 +12,10 @@ function draw() {
     background('SlateGray');
     drawShape();
     rectX += 2;
+    if(rectX > width) {
+        noLoop();
+        text('Your score was ' + clickCount, 250, 250);
+    }
 }
 
 function mousePressed() {
