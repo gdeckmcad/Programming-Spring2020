@@ -1,13 +1,13 @@
-function setup () {
+function setup() {
     createCanvas(500, 500);
 }
 
-function draw () {
+function draw() {
     background(155);
     drawShape();
 }
 
-function drawShape () {
+function drawShape() {
     fill('purple');
-    rec(30, 30, 75, 75);
+    rect(0, 0, 75, 75);
 }
