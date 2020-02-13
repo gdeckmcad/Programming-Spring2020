@@ -1,11 +1,12 @@
 let rectX = 0;
-let rectY = 0;
-let rectWidth = 75;
-let rectHeight = 75;
+const rectWidth = 75;
+const rectHeight = 75;
+let rectY;
 let clickCount = 0;
 
 function setup() {
     createCanvas(500, 500);
+    rectY = random(height - rectHeight);
 }
 
 function draw() {
