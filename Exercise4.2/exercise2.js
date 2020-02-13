@@ -2,6 +2,7 @@ let rectX = 0;
 let rectY = 0;
 let rectWidth = 75;
 let rectHeight = 75;
+let clickCount = 0;
 
 function setup() {
     createCanvas(500, 500);
@@ -15,7 +16,8 @@ function draw() {
 
 function mousePressed() {
     if((mouseX >= 0 && mouseX <= rectX + rectWidth) && (mouseY >= 0 && mouseY <= rectY + rectHeight)) {
-        console.log('hit');
+        clickCount++;
+        console.log('hit', clickCount);
     }
 }
 
