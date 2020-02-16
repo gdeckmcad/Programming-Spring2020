@@ -6,9 +6,13 @@ function setup () {
     createCanvas(605, 569);
     background('#F8E7A9');
     //rect(rectX, rectY, 175, 100);
-    for (let i = 0; i < 3; i++) {
-        rect(startingX, startingY, 175, 100);
-        myGrid.push({x: startingX, y: startingY});
-        startingX += 190;
+    for (let k = 0; k < 4; k++) {
+        for (let i = 0; i < 3; i++){
+            rect(startingX, startingY, 175, 100);
+            myGrid.push({ x: startingX, y: startingY, id: i + k });
+            startingX += 190;
+        }
+        startingY += 115;
+        startingX = 20;
     }
 }
