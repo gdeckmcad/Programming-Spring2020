@@ -1,7 +1,8 @@
 let blockX = 0;
 let blockY = 0;
+let blockColor = 255;
 let drawTimer;
-const speed = 5;
+const speed = 20;
 const distance = 2;
 
 function setup() {
@@ -15,18 +16,24 @@ function drawBlock(x, y, color) {
 }
 
 function keyTyped() {
-    console.log('your pressed', key);
+    let keyToNumber = Number(key);
+    if (isNaN(keyToNumber)) {
+        return;
+    }
+    keyToNumber = map(keyToNumber, 1, 9, 1, 255);
+    console.log('converted number', keyToNumber);
+    blockColor = keyToNumber;
 }
 
 drawTimer = window.setInterval(() => {
     if (blockY - 50 <= height) {
-        drawBlock(blockX, blockY, 255);
+        drawBlock(blockX, blockY, blockColor);
         blockY += distance;
     } else {
         blockY = 0;
         blockX += 50;
     }
-    if (blockY > height && blockX >= width) {
+    if (blockY >= height && blockX >= width) {
         window.clearInterval(drawTimer);
         alert('done');
     }
