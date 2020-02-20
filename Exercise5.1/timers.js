@@ -2,11 +2,11 @@ let blockX = 0;
 let blockY = 0;
 let blockColor = 255;
 let drawTimer;
-const speed = 20;
+const speed = 5;
 const distance = 2;
 
 function setup() {
-    createCanvas(300, 300);
+    createCanvas(500, 500);
     background(0);
 }
  
@@ -33,7 +33,7 @@ drawTimer = window.setInterval(() => {
         blockY = 0;
         blockX += 50;
     }
-    if (blockY >= height && blockX >= width) {
+    if (blockY - 50 > height && blockX - 50 > width) {
         window.clearInterval(drawTimer);
         alert('done');
     }
