@@ -1,17 +1,21 @@
 let blockX = 0;
 let blockY = 0;
 let drawTimer;
-const speed = 20;
+const speed = 5;
 const distance = 2;
 
 function setup() {
-    createCanvas(200, 200);
+    createCanvas(300, 300);
     background(0);
 }
  
 function drawBlock(x, y, color) {
     fill(color || 255);
     rect(x, y, 50, 50);
+}
+
+function keyTyped() {
+    console.log('your pressed', key);
 }
 
 drawTimer = window.setInterval(() => {
@@ -22,7 +26,7 @@ drawTimer = window.setInterval(() => {
         blockY = 0;
         blockX += 50;
     }
-    if (blockY - 50 > height && blockX - 50 > width) {
+    if (blockY > height && blockX >= width) {
         window.clearInterval(drawTimer);
         alert('done');
     }
