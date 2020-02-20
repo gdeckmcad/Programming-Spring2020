@@ -6,8 +6,8 @@ class Bubble {
         this.y = 150;
     }
     move() {
-        this.x = this.x + random(-5, 5); 
-        this.y = this.y + random(-5, 5);       
+        this.x = random(width);
+        this.y = random(height);
     }
     show() {
         stroke('#0339A6');
@@ -20,11 +20,13 @@ class Bubble {
 function setup() {
     createCanvas(500, 500);
     bubble = new Bubble();
-    print(bubble.x, bubble.y);
+    //print(bubble.x, bubble.y);
 }
 
 function draw() {
     background('#4CB1F7');
+for (let i = 0; i < 10; i++){
     bubble.move();
     bubble.show();
+}
 }
