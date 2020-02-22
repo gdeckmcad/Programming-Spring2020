@@ -1,20 +1,3 @@
-class Card {
-    constructor() {
-        this.x = startingX;
-        this.y = startingY;
-        this.width = 175;
-        this.height = 100;
-        this.show();
-    }
-    show () {
-        fill('#93C8B0');
-        noStroke();
-        rect(this.x, this.y, this.width, this.height, 10);
-    }
-}
-
-
-
 // grid variables
 let startingX = 20;
 let startingY = 90;
@@ -24,6 +7,30 @@ let myGrid = [];
 let myFont;
 function preload () {
     myFont = loadFont('Lato-Light.ttf');
+}
+
+//loading imgs
+
+
+//setting up card class
+class Card {
+    constructor() {
+        this.x = startingX;
+        this.y = startingY;
+        this.width = 175;
+        this.height = 100;
+        this.show();
+    }
+    show () {
+        fill('#A9D9C3');
+        noStroke();
+        rect(this.x, this.y, this.width, this.height);
+        fill('#93C8B0');
+        rect(this.x, this.y, this.width, 15);
+        rect(this.x, this.y+28, this.width, 15);
+        rect(this.x, this.y+56, this.width, 15);
+        rect(this.x, this.y+84, this.width, 15);
+    }
 }
 
 //grid of cards
