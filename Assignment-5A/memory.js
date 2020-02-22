@@ -1,3 +1,21 @@
+class Card {
+    constructor() {
+        this.x = startingX;
+        this.y = startingY;
+        this.width = 175;
+        this.height = 100;
+        this.show();
+    }
+    show () {
+        fill('#93C8B0');
+        noStroke();
+        rect(this.x, this.y, this.width, this.height, 10);
+    }
+}
+
+
+
+// grid variables
 let startingX = 20;
 let startingY = 90;
 let myGrid = [];
@@ -14,7 +32,8 @@ function setup () {
     background('#F8E7A9');
     for (let k = 0; k < 4; k++) {
         for (let i = 0; i < 3; i++){
-            rect(startingX, startingY, 175, 100);
+            //rect(startingX, startingY, 175, 100);
+            let myCard = new Card();
             myGrid.push({ x: startingX, y: startingY, id: i + k });
             startingX += 190;
         }
@@ -25,6 +44,7 @@ function setup () {
 
 //messaging
 function draw () {
+    fill(0);
     textFont(myFont);
     textSize(20);
     textAlign(CENTER, CENTER);
