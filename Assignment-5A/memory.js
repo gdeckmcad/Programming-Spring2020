@@ -100,7 +100,7 @@ function setup () {
 function draw () {
     background('#F8E7A9');
     if (gameState.numMatched === gameState.totalPairs) {
-        fill('black');
+        fill(0);
         textSize(66);
         text('You win!', 175, 225);
         noLoop();
@@ -112,7 +112,14 @@ function draw () {
         cards[m].show();
     }
     noLoop();
-
+    gameState.flippedCards.length = 0;
+    gameState.waiting = false;
+    fill(0);
+    textFont(myFont);
+    textAlign(CENTER, CENTER);
+    textSize(16);
+    text('attempts ' + gameState.attempts, 300, 65);
+    text('matches ' + gameState.numMatched, 300, 45);
 
 }
 
@@ -130,7 +137,8 @@ function mousePressed() {
         }
     }
     if (gameState.flippedCards.length === 2) {
-        if (gameState.flippedCards[0].faceImage === gameState.flippedCards[1].faceImage) {
+            gameState.attempts++;
+        if (gameState.flippedCards[0].cardFaceImg === gameState.flippedCards[1].cardFaceImg) {
            // mark cards as matched so they don't flip back when matched
             gameState.flippedCards[0].isMatch = true;
             gameState.flippedCards[1].isMatch = true;
