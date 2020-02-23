@@ -1,10 +1,11 @@
-// grid variables
 let startingX = 20;
 let startingY = 90;
-let myGrid = [];
-let myCard;
+let cards = [];
 const DOWN = 'down';
 const UP = 'up';
+const gameState = {
+
+}
 
 //loading font
 let myFont;
@@ -16,9 +17,9 @@ function preload () {
 
 //setting up card class, took off border radius from demo
 class Card {
-    constructor() {
-        this.x = startingX;
-        this.y = startingY;
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
         this.width = 175;
         this.height = 100;
         this.face = DOWN;
@@ -63,20 +64,22 @@ function setup () {
     createCanvas(605, 569);
     background('#F8E7A9');
     for (let k = 0; k < 4; k++) {
-        for (let i = 0; i < 3; i++){
-            //rect(startingX, startingY, 175, 100);
-            myCard = new Card();
-            myGrid.push({ x: startingX, y: startingY, id: i + k });
-            startingX += 190;
-        }
-        startingY += 115;
-        startingX = 20;
+    for (let i = 0; i < 3; i++){
+        cards.push(new Card(startingX, startingY));
+        startingX += 190;
     }
+    startingY += 115;
+    startingX = 20;
+}
 }
 
 //flipping card
 function mousePressed() {
-    console.log(myCard.didHit(mouseX, mouseY));
+    for (let j = 0; j < cards.length; j++) {
+        if(cards[j].didHit(mouseX, mouseY)) {
+            console.log('flipped');
+        }
+    }
 }
 
 //messaging
