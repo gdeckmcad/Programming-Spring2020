@@ -5,14 +5,14 @@ const DOWN = 'down';
 const UP = 'up';
 const gameState = {
 
-}
+};
 
-//pre load function for images and font
+//preload function for images and font
 let myFont;
-let cardFaceArray = [];
+let cardfaceArray = [];
 function preload () {
     myFont = loadFont('Lato-Light.ttf');
-    cardFaceArray = [
+    cardfaceArray = [
         loadImage('imgs/match-1.png'),
         loadImage('imgs/match-2.png'),
         loadImage('imgs/match-3.png'),
@@ -25,12 +25,13 @@ function preload () {
 
 //setting up card class, took off border radius from demo
 class Card {
-    constructor(x, y) {
+    constructor(x, y, cardFaceImg) {
         this.x = x;
         this.y = y;
         this.width = 175;
         this.height = 100;
         this.face = DOWN;
+        this.cardFaceImg = cardFaceImg;
         this.show();
     }
     show () {
@@ -43,9 +44,9 @@ class Card {
         rect(this.x, this.y + 28, this.width, 15);
         rect(this.x, this.y + 56, this.width, 15);
         rect(this.x, this.y + 84, this.width, 15);
-    } else {
-        image(cardFront, this.x, this.y);
-    }
+        } else {
+            image(this.cardFaceImg, this.x, this.y);
+        }
     }
     didHit (mouseX, mouseY) {
         if(mouseX >= this.x && mouseX <= this.x + this.width && 
@@ -66,13 +67,23 @@ class Card {
     }
 }
 
-//grid of cards
 function setup () {
     createCanvas(605, 569);
     background('#F8E7A9');
+    let selectedFaces = [];
+    for (let z = 0; z < 6; z++) {
+        const randomIdx = floor(random(cardfaceArray.length));
+        const face = cardfaceArray[randomIdx];
+        selectedFaces.push(face);
+        selectedFaces.push(face);
+        //removee the used cardface so it doesn't get randomized
+        cardfaceArray.splice(randomIdx, 1);
+    }
+    //grid
     for (let k = 0; k < 4; k++) {
         for (let i = 0; i < 3; i++){
-        cards.push(new Card(startingX, startingY));
+        const faceImage = selectedFaces.pop();
+        cards.push(new Card(startingX, startingY, faceImage));
         startingX += 190;
         }
     startingY += 115;
@@ -84,10 +95,13 @@ function setup () {
 function mousePressed() {
     for (let j = 0; j < cards.length; j++) {
         if(cards[j].didHit(mouseX, mouseY)) {
-            console.log('flipped');
+            console.log('flipped', cards[j]);
         }
     }
 }
+
+//shuffle
+
 
 //messaging
 function draw () {
