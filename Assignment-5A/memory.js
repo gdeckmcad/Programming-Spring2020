@@ -4,7 +4,11 @@ let cards = [];
 const DOWN = 'down';
 const UP = 'up';
 const gameState = {
-
+    totalPairs: 0,
+    flippedCards: [],
+    numMatched: 0,
+    attempts: 0,
+    waiting: false
 };
 
 //preload function for images and font
@@ -32,20 +36,21 @@ class Card {
         this.height = 100;
         this.face = DOWN;
         this.cardFaceImg = cardFaceImg;
+        this.isMatch = false;
         this.show();
     }
     show () {
-        if(this.face === DOWN) {
-        fill('#A9D9C3');
-        noStroke();
-        rect(this.x, this.y, this.width, this.height);
-        fill('#93C8B0');
-        rect(this.x, this.y, this.width, 15);
-        rect(this.x, this.y + 28, this.width, 15);
-        rect(this.x, this.y + 56, this.width, 15);
-        rect(this.x, this.y + 84, this.width, 15);
-        } else {
+        if(this.face === UP || this.isMatch) {
             image(this.cardFaceImg, this.x, this.y);
+        } else {
+            fill('#A9D9C3');
+            noStroke();
+            rect(this.x, this.y, this.width, this.height);
+            fill('#93C8B0');
+            rect(this.x, this.y, this.width, 15);
+            rect(this.x, this.y + 28, this.width, 15);
+            rect(this.x, this.y + 56, this.width, 15);
+            rect(this.x, this.y + 84, this.width, 15);
         }
     }
     didHit (mouseX, mouseY) {
@@ -95,12 +100,13 @@ function setup () {
 //flipping card
 function mousePressed() {
     for (let j = 0; j < cards.length; j++) {
-        if(cards[j].didHit(mouseX, mouseY)) {
+        // first check flipped cards length and then we can trigger the flip
+        if (gameState.flippedCards.length < 2 && cards[j].didHit(mouseX, mouseY)) {
             console.log('flipped', cards[j]);
+            gameState.flippedCards.push(cards[j]);
         }
     }
 }
-
 
 //messaging
 function draw () {
