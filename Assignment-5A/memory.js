@@ -79,6 +79,7 @@ function setup () {
         //removee the used cardface so it doesn't get randomized
         cardfaceArray.splice(randomIdx, 1);
     }
+    selectedFaces = shuffleArray(selectedFaces);
     //grid
     for (let k = 0; k < 4; k++) {
         for (let i = 0; i < 3; i++){
@@ -100,8 +101,6 @@ function mousePressed() {
     }
 }
 
-//shuffle
-
 
 //messaging
 function draw () {
@@ -114,3 +113,19 @@ function draw () {
     textAlign(CENTER,CENTER);
     text('0/6 matches found', 300, 60);
 }
+
+    //shuffle
+    function shuffleArray (array) {
+        let counter = array.length;
+        while (counter > 0) {
+            // pick random index
+            const idx = Math.floor(Math.random() * counter);
+            // decrease counter by 1 
+            counter --;
+            // swap the last element with it
+            const temp = array[counter];
+            array[counter] = array[idx];
+            array[idx] = temp;
+        }
+        return array;
+        }
