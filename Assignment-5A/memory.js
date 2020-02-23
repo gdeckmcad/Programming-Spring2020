@@ -4,7 +4,7 @@ let cards = [];
 const DOWN = 'down';
 const UP = 'up';
 const gameState = {
-    totalPairs: 0,
+    totalPairs: 6,
     flippedCards: [],
     numMatched: 0,
     attempts: 0,
@@ -74,7 +74,6 @@ class Card {
 
 function setup () {
     createCanvas(605, 569);
-    background('#F8E7A9');
     let selectedFaces = [];
     for (let z = 0; z < 6; z++) {
         const randomIdx = floor(random(cardfaceArray.length));
@@ -97,8 +96,32 @@ function setup () {
     }
 }
 
+
+function draw () {
+    background('#F8E7A9');
+    if (gameState.numMatched === gameState.totalPairs) {
+        fill('black');
+        textSize(66);
+        text('You win!', 175, 225);
+        noLoop();
+    }
+    for (let m = 0; m < cards.length; m++) {
+        if(!cards[m].isMatch) {
+            cards[m].face = DOWN;
+        }
+        cards[m].show();
+    }
+    noLoop();
+
+
+}
+
 //flipping card
 function mousePressed() {
+    if (gameState.waiting) {
+        //stops function and won't go on to the rest of it
+        return;
+    }
     for (let j = 0; j < cards.length; j++) {
         // first check flipped cards length and then we can trigger the flip
         if (gameState.flippedCards.length < 2 && cards[j].didHit(mouseX, mouseY)) {
@@ -106,22 +129,28 @@ function mousePressed() {
             gameState.flippedCards.push(cards[j]);
         }
     }
+    if (gameState.flippedCards.length === 2) {
+        if (gameState.flippedCards[0].faceImage === gameState.flippedCards[1].faceImage) {
+           // mark cards as matched so they don't flip back when matched
+            gameState.flippedCards[0].isMatch = true;
+            gameState.flippedCards[1].isMatch = true;
+            //empty the flipped cards array
+            gameState.flippedCards.length = 0;
+            // increment the score
+            gameState.numMatched++;
+            loop();
+        } else {
+            gameState.waiting = true;
+            const loopTimeout = window.setTimeout(() => {
+                loop();
+                window.clearTimeout(loopTimeout);
+            }, 1000)
+        }
+    }
 }
 
-//messaging
-function draw () {
-    fill(0);
-    textFont(myFont);
-    textSize(20);
-    textAlign(CENTER, CENTER);
-    text('Charley Harper Memory Card Game', 300, 30);
-    textSize(16);
-    textAlign(CENTER,CENTER);
-    text('0/6 matches found', 300, 60);
-}
-
-    //shuffle
-    function shuffleArray (array) {
+//shuffle
+function shuffleArray (array) {
         let counter = array.length;
         while (counter > 0) {
             // pick random index
