@@ -7,12 +7,20 @@ const gameState = {
 
 }
 
-//loading font
+//pre load function for images and font
 let myFont;
+let cardFaceArray = [];
 function preload () {
     myFont = loadFont('Lato-Light.ttf');
+    cardFaceArray = [
+        loadImage('imgs/match-1.png'),
+        loadImage('imgs/match-2.png'),
+        loadImage('imgs/match-3.png'),
+        loadImage('imgs/match-4.png'),
+        loadImage('imgs/match-5.png'),
+        loadImage('imgs/match-6.png'),
+    ]
 }
-//loading imgs
 
 
 //setting up card class, took off border radius from demo
@@ -36,8 +44,7 @@ class Card {
         rect(this.x, this.y + 56, this.width, 15);
         rect(this.x, this.y + 84, this.width, 15);
     } else {
-        fill(0);
-        rect(this.x, this.y, this.width, this.height);
+        image(cardFront, this.x, this.y);
     }
     }
     didHit (mouseX, mouseY) {
@@ -64,13 +71,13 @@ function setup () {
     createCanvas(605, 569);
     background('#F8E7A9');
     for (let k = 0; k < 4; k++) {
-    for (let i = 0; i < 3; i++){
+        for (let i = 0; i < 3; i++){
         cards.push(new Card(startingX, startingY));
         startingX += 190;
-    }
+        }
     startingY += 115;
     startingX = 20;
-}
+    }
 }
 
 //flipping card
