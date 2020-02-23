@@ -102,7 +102,8 @@ function draw () {
     if (gameState.numMatched === gameState.totalPairs) {
         fill(0);
         textSize(66);
-        text('You win!', 175, 225);
+        textFont(myFont);
+        text('You win!', 350, 75);
         noLoop();
     }
     for (let m = 0; m < cards.length; m++) {
@@ -116,10 +117,11 @@ function draw () {
     gameState.waiting = false;
     fill(0);
     textFont(myFont);
-    textAlign(CENTER, CENTER);
     textSize(16);
-    text('attempts ' + gameState.attempts, 300, 65);
-    text('matches ' + gameState.numMatched, 300, 45);
+    text('attempts ' + gameState.attempts, 25, 75);
+    text('matches ' + gameState.numMatched, 25, 55);
+    textSize(20);
+    text('Charley Harper Memory Card Game', 25, 30);
 
 }
 
