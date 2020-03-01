@@ -5,6 +5,27 @@
     <title>Grace's Llama facts</title>
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <div id="myLlamas">
+    <h1>Llama Facts</h1>
+    <ol>
+        <li>{{factOne}}</li>
+        <li>{{factTwo}}</li>
+        <li>{{factThree}}</li>
+        <li>{{factFour}}</li>
+        <li>{{factFive}}</li>
+        <li>{{factSix}}</li>
+        <li>{{factSeven}}</li>
+        <li>{{factEight}}</li>
+        <li>{{factNine}}</li>
+        <li>{{factTen}}</li>
+    </ol>
+    <ul>
+        <li v-if="llamasAreAwesome!==true">Yuck, Llama's spit when agitated</li>
+        <li v-else>Extra! Llamas are social animals</li>
+    </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>   
+    <script src="llama.js"></script> 
 </body>
 </html>
