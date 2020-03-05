@@ -9,7 +9,7 @@ new Vue ({
         ],
     alpacas: [
         {message: 'Alpacas have straight and small ears'},
-        {message: 'Alpcas weight 175 pounds'},
+        {message: 'Alpcas weigh 175 pounds'},
         {message: 'Alpacas are a little more skittish'},
         {message: 'Alpacas faces look smushed'}
     ],
