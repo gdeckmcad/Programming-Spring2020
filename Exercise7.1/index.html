@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Grace's Llama facts</title>
+</head>
+<body>
+ 
+<div id="myComparison" v-cloak>
+    <h2>Llamas</h2>
+    <a v-bind:href="llamaLink">More Llama info</a>
+        <ol>
+            <li v-for="item in llamas" :key="item.message">
+                {{ item.message }}
+            </li>
+        </ol>
+    <h2>Alpacas</h2>
+    <a v-bind:href="alpacaLink">More Alpaca info</a>
+        <ol>
+            <li v-for="item in alpacas" :key="item.message">
+                {{ item.message }}
+            </li>
+        </ol>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>   
+    <script src="compare.js"></script> 
+</body>
+</html>
