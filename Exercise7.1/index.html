@@ -10,22 +10,22 @@
 <body>
  
 <div id="myComparison" v-cloak>
-    
+
     <div>
-    <h2>Llamas</h2>
-    <a v-bind:href="llamaLink">More Llama info</a>
+    <h2 v-bind:style="{color:'brown'}">Llamas</h2>
+    <a v-bind:style="linkStyle" v-bind:href="llamaLink" v-bind:title="llamaTitle">More Llama info</a>
         <ol>
-            <li v-for="item in llamas" :key="item.message">
+            <li v-for="(item, index) in llamas" :key="item.message" v-bind:class="{chocolate: index%2==0}">
                 {{ item.message }}
             </li>
         </ol>
     </div>
 
     <div>
-    <h2>Alpacas</h2>
-    <a v-bind:href="alpacaLink">More Alpaca info</a>
+    <h2 v-bind:style="{color:'brown'}">Alpacas</h2>
+    <a v-bind:style="linkStyle" v-bind:href="alpacaLink" v-bind:title="alpacaTitle">More Alpaca info</a>
         <ol>
-            <li v-for="item in alpacas" :key="item.message">
+            <li v-for="(item, index) in alpacas" :key="item.message" v-bind:class="{chocolate: index%2==0}">
                 {{ item.message }}
             </li>
         </ol>

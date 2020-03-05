@@ -7,10 +7,10 @@ body {
     margin-left: 20%;
     margin-right: 20%;
     margin-top:50px;
-    color: SlateBlue;
+    color: black;
     font-family: 'Open Sans', sans-serif;
     line-height: 2rem;
-    background-color: lightCyan;
+    background-color: #ffffff;
 }
 
 h1 {
@@ -22,4 +22,8 @@ h1 {
     display: inline-grid;
     grid-template-columns: 50% 50%;
     width: 100%;
+}
+
+.chocolate {
+    color: chocolate;
 }

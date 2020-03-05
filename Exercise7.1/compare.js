@@ -14,7 +14,14 @@ new Vue ({
         {message: 'Alpacas faces look smushed'}
     ],
     llamaLink: 'https://en.wikipedia.org/wiki/Llama',
-    alpacaLink: 'https://en.wikipedia.org/wiki/alpaca'
+    llamaTitle: 'More Llama info',
+    alpacaLink: 'https://en.wikipedia.org/wiki/alpaca',
+    alpacaTitle: 'More Alpaca info',
+    linkStyle: {
+        textDecoration: 'none',
+        borderBottom: '2px dotted blue',
+        color: 'blue'
+    }
 }
 
 })
