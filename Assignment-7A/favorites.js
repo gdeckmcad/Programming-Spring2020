@@ -5,7 +5,7 @@ var myBooks = [
         pages: '176 pages',
         rating: '4.3 stars',
         published:'May 1, 1991'
-    }
+    },
 
     {
         title:'Ghost World',
@@ -13,7 +13,7 @@ var myBooks = [
         pages: '80 pages',
         rating: '4.3 stars',
         published:'February 10, 2015'
-    }
+    },
 
     {
         title:'The Opposite of Loneliness',
@@ -21,7 +21,7 @@ var myBooks = [
         pages: '256 pages',
         rating: '4.4 stars',
         published:'April 14, 2015'
-    }
+    },
 
     {
         title:'M Train',
@@ -29,7 +29,7 @@ var myBooks = [
         pages: '272 pages',
         rating: '4.5 stars',
         published:'April 1, 2016'
-    }
+    },
 
     {
         title:'1Q84',
@@ -39,3 +39,11 @@ var myBooks = [
         published:'January 22, 2013'
     }
 ]
+
+var myBookList = new Vue ({
+    el: '#myBooks',
+    data : {
+        books: myBooks,
+        heading: "My Favorite Books"
+    }
+})

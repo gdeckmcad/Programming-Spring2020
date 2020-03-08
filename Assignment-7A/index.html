@@ -2,10 +2,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Grace's Favorite Books</title>
 </head>
 <body>
+    <div id="myBooks">
+    
+    <h1>{{heading}}</h1>
+    <table class="list-container" v-cloak>
 
+        <thead>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Pages</th>
+          <th>Rating</th>
+          <th>Publish date</th>
+        </thead>
+
+        <tbody>
+          <tr v-for="(item, index) in books">
+            <td>{{item.title}}</td>
+            <td>{{item.author}}</td>
+            <td>{{item.pages}}</td>
+            <td>{{item.rating}}</td>
+            <td>{{item.published}}</td>
+          </tr>
+        </tbody>
+        
+      </table>
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

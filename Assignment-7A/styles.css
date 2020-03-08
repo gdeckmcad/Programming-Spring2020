@@ -1,0 +1,35 @@
+[v-cloak] {
+    display:none;
+}
+
+th {
+    width:300px;
+    text-align: left;
+    padding-bottom:10px;
+    border-bottom: 1px dashed #000000;
+  }
+  
+  td {
+    line-height:40px;
+    vertical-align: top;
+    padding-top:10px;
+    padding-bottom:10px;
+    border-bottom: 1px dashed #BEBEBE;
+  }
+
+
+  body {
+    margin: 0, auto;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top:50px;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 2rem;
+    background-color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom:24px;
+}
