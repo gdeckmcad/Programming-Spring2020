@@ -3,6 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <title>Grace's Favorite Books</title>
 </head>
 <body>
@@ -20,7 +22,7 @@
         </thead>
 
         <tbody>
-          <tr v-for="(item, index) in books">
+          <tr v-for="(item, index) in books" v-bind:class="{even: (index + 1) % 2 === 0, odd: (index + 1) % 2 !== 0}">
             <td>{{item.title}}</td>
             <td>{{item.author}}</td>
             <td>{{item.pages}}</td>
