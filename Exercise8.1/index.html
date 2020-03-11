@@ -41,8 +41,10 @@
                 <div class="alpaca-color">
                     <p>Favorite Alpaca Colors</p>
                     <div>
-                        <label for="">Color<input type="checkbox" name="" id="">
-                        </label>
+                        <ul>
+                            <li v-for="color in colors"><label v-bind:for="color.value"><input type="checkbox" name="" v-model="selectedColors" v-bind:id="color.value" v-bind:value="color.value">{{color.name}}
+                            </label></li>
+                        </ul>
                     </div>
                 </div>
 
@@ -61,7 +63,7 @@
                     <p>Street Address: {{street}}</p>
                     <p>City: {{city}}</p>
                     <p>State: {{state}}</p>
-                    <p>Favorite Alpaca Color: {{color}}</p>
+                    <p>Color: {{selectedColors}}</p>
                     <p>Status: {{status}}</p>
             </div>
         </form>
