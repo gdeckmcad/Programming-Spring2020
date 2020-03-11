@@ -33,8 +33,10 @@
 
                 <div>
                     <label for="">State</label>
-                    <select name="" id="">
-
+                    <select name="" id="" v-model="state">
+                            <option v-for="state in availableStates" v-bind:value="state.value">
+                                {{state.name}}
+                            </option>
                     </select>
                 </div>
 
