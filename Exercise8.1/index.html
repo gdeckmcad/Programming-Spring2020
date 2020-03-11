@@ -10,42 +10,67 @@
         <form>
             <fieldset>
                 <legend>Fan Club Registration</legend>
+
                 <div>
-                    <label for="">First Name</label>
-                    <input type="text">
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" type="text" v-model="firstName">
                 </div>
+
                 <div>
-                    <label for="">Last Name</label>
-                    <input type="text">
+                    <label for="lastName">Last Name</label>
+                    <input id="lastName" type="text" v-model="lastName">
                 </div>
+
                 <div>
-                    <label for="">Street Address</label>
-                    <input type="text">
+                    <label for="street">Street Address</label>
+                    <input id="street" type="text" v-model="street">
                 </div>
+
                 <div>
-                    <label for="">City</label>
-                    <input type="text">
+                    <label for="city">City</label>
+                    <input id="city" type="text" v-model="city">
                 </div>
+
                 <div>
                     <label for="">State</label>
-                    <input type="text">
+                    <select name="" id="">
+
+                    </select>
                 </div>
-                <div>
+
+                <div class="alpaca-color">
                     <p>Favorite Alpaca Colors</p>
+                    <div>
+                        <label for="">Color<input type="checkbox" name="" id="">
+                        </label>
+                    </div>
                 </div>
-                <div>
+
+                <div class="alpaca-status">
                     <label>Alpaca Status</label>
+                    <textarea cols="30" rows="10" v-model="status"></textarea>
                 </div>
 
 
             </fieldset>
+
+            <div class="output">
+                <h3>Output</h3>
+                    <p>First Name: {{firstName}}</p>
+                    <p>Last Name: {{lastName}}</p>
+                    <p>Street Address: {{street}}</p>
+                    <p>City: {{city}}</p>
+                    <p>State: {{state}}</p>
+                    <p>Favorite Alpaca Color: {{color}}</p>
+                    <p>Status: {{status}}</p>
+            </div>
         </form>
 
 
 
     </div>
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>   
+<script src="script.js"></script> 
 
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>   
-    <script src="script.js"></script> 
 </body>
 </html>

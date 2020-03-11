@@ -1,6 +1,6 @@
-[v-cloak] {
+/**[v-cloak] {
     display: none;
-}
+}**/
 
 form {
     width: 100%;
@@ -9,18 +9,18 @@ form {
 }
 
 div {
-    margin:10px 0;
-    display:flex;
+    margin: 10px 0;
+    display: flex;
 }
 
-div.aplaca-status {
+div.aplaca-status, div.alpaca-color, div.output {
     flex-direction: column;
 }
 
 div label {
-    margin-right:10px;
+    margin-right: 10px;
 }
 
-div input {
+div input, div select {
     flex-grow: 1;
 }

@@ -1,11 +1,13 @@
 const vm = new Vue ({
     el: '#alpacaForm',
-    data {
-
-        
+    data: {
+        firstName: '',
+        lastName: '',
+        street: '',
+        city: '',
+        state: 'MN',
+        colors: [],
+        status: ''
     }
-
-
-
 
 });
