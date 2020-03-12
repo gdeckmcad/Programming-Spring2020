@@ -13,9 +13,12 @@ form {
 }
 
 legend {
-    font-weight: 700;
-    font-size:20px;
+    font-size:18px;
     text-transform: uppercase;
+    background-color: white;
+    border:3px dotted #083899;
+    text-align: center;
+    padding:8px;
 }
 
 div {
@@ -27,6 +30,8 @@ div {
 
 fieldset {
     background-color: #ffffff;
+    padding:20px;
+    border: 3px dotted #083899;
 }
 
 div.alpaca-status, div.alpaca-color, div.output {
@@ -35,7 +40,6 @@ div.alpaca-status, div.alpaca-color, div.output {
 
 div label {
     margin-right: 10px;
-    font-weight:700;
 }
 
 div input, div select {
