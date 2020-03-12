@@ -1,6 +1,10 @@
-/**[v-cloak] {
+[v-cloak] {
     display: none;
-}**/
+}
+
+body {
+    background-color: lightcyan;
+}
 
 form {
     width: 100%;
@@ -8,17 +12,30 @@ form {
     margin: 0 auto;
 }
 
+legend {
+    font-weight: 700;
+    font-size:20px;
+    text-transform: uppercase;
+}
+
 div {
     margin: 10px 0;
     display: flex;
+    font-family: 'Open Sans', sans-serif;
+    font-size:14px;
 }
 
-div.aplaca-status, div.alpaca-color, div.output {
+fieldset {
+    background-color: #ffffff;
+}
+
+div.alpaca-status, div.alpaca-color, div.output {
     flex-direction: column;
 }
 
 div label {
     margin-right: 10px;
+    font-weight:700;
 }
 
 div input, div select {
@@ -33,4 +50,9 @@ ul {
 
 li {
     margin: 5px 0;
+}
+
+p {
+    line-height:1rem;
+    margin: 5px;
 }
