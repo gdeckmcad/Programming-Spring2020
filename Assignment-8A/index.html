@@ -8,10 +8,10 @@
     <title>Grace's Favorite Books</title>
 </head>
 <body>
-    <div id="myBooks">
+    <div id="myBooks" v-cloak>
     
     <h1>{{heading}}</h1>
-    <table class="list-container" v-cloak>
+    <table class="list-container">
 
         <thead>
           <th>Title</th>
@@ -40,33 +40,36 @@
       <form v-on:submit.prevent="submitHandler">
         <fieldset>
           <legend>Add a book to the collection</legend>
-
-          <div>
+          <table>
+            
+          <td>
             <label for="title">Title</label>
             <input id="title" type="text" v-model="newBookObject.title">
-          </div>
+          </td>
 
-          <div>
+          <td>
             <label for="author">Author</label>
             <input id="author" type="text" v-model="newBookObject.author">
-          </div>
+          </td>
 
-          <div>
+          <td>
             <label for="pages">Pages</label>
             <input id="pages" type="number" v-model="newBookObject.pages">
-          </div>
+          </td>
 
-          <div>
+          <td>
             <label for="rating">Rating</label>
             <input id="rating" type="text" v-model="newBookObject.rating">
-          </div>
+          </td>
 
-          <div>
+          <td>
             <label for="published">Publish date</label>
             <input id="published" type="date" v-model="newBookObject.published">
-          </div>
-
-          <button type="submit">Add book</button>
+          </td>
+          
+          <td><button type="submit">Add book</button></td>
+          
+        </table>
         </fieldset>
       </form>
     </div>
