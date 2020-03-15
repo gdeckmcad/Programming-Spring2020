@@ -2,7 +2,7 @@ var myBooks = [
     {
         title:'Franny and Zooey',
         author:'JD Salinger',
-        pages: '176 pages',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/7/72/Frannyzoey.jpg',
         rating: '4.3 stars',
         published:'May 1, 1991'
     },
@@ -10,7 +10,7 @@ var myBooks = [
     {
         title:'Ghost World',
         author:'Daniel Clowes',
-        pages: '80 pages',
+        image: 'https://en.wikipedia.org/wiki/Franny_and_Zooey#/media/File:Frannyzoey.jpg',
         rating: '4.3 stars',
         published:'February 10, 2015'
     },
@@ -18,7 +18,7 @@ var myBooks = [
     {
         title:'The Opposite of Loneliness',
         author:'Marina Keegan',
-        pages: '256 pages',
+        image: 'https://en.wikipedia.org/wiki/Franny_and_Zooey#/media/File:Frannyzoey.jpg',
         rating: '4.4 stars',
         published:'April 14, 2015'
     },
@@ -26,7 +26,7 @@ var myBooks = [
     {
         title:'M Train',
         author:'Patti Smith',
-        pages: '272 pages',
+        image: 'https://en.wikipedia.org/wiki/Franny_and_Zooey#/media/File:Frannyzoey.jpg',
         rating: '4.5 stars',
         published:'April 1, 2016'
     },
@@ -34,7 +34,7 @@ var myBooks = [
     {
         title:'1Q84',
         author:'Haruki Murakami',
-        pages: '1,184 pages',
+        image: 'https://en.wikipedia.org/wiki/Franny_and_Zooey#/media/File:Frannyzoey.jpg',
         rating: '4.1 stars',
         published:'January 22, 2013'
     }
@@ -48,7 +48,7 @@ var myBookList = new Vue ({
         newBookObject: {
             title:'',
             author:'',
-            pages: '',
+            image: '',
             rating: '',
             published:''
             }
@@ -63,7 +63,7 @@ var myBookList = new Vue ({
                 myBookList.newBookObject = {
                     title:'',
                     author:'',
-                    pages: '',
+                    image: '',
                     rating: '',
                     published:''
                 };

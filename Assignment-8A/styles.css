@@ -62,4 +62,32 @@ th {
 .odd {
   background:#ffffff;
 }
-  
+
+img {
+  display: block;
+  width: 75px;
+}
+
+input {
+  height: 32px;;
+}
+
+label {
+  color: mediumblue;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+fieldset {
+  border:none;
+  padding:0;
+}
+
+legend {
+  color: tomato;
+  font-family: 'Aleo', serif;
+  font-weight:700;
+  font-size: 22px;
+  padding-top:20px;
+}

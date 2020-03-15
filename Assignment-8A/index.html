@@ -16,7 +16,7 @@
         <thead>
           <th>Title</th>
           <th>Author</th>
-          <th>Pages</th>
+          <th>Cover</th>
           <th>Rating</th>
           <th>Publish date</th>
           <th>Actions</th>
@@ -26,7 +26,7 @@
           <tr v-for="(item, index) in books" v-bind:class="{even: (index + 1) % 2 === 0, odd: (index + 1) % 2 !== 0}">
             <td>{{item.title}}</td>
             <td>{{item.author}}</td>
-            <td>{{item.pages}}</td>
+            <td><img :src="item.image" :alt="item.title"></td>
             <td>{{item.rating}}</td>
             <td>{{item.published}}</td>
             <td>
@@ -53,8 +53,8 @@
           </td>
 
           <td>
-            <label for="pages">Pages</label>
-            <input id="pages" type="number" v-model="newBookObject.pages">
+            <label for="image">Image</label>
+            <input id="image" type="text" v-model="newBookObject.image">
           </td>
 
           <td>
@@ -66,7 +66,7 @@
             <label for="published">Publish date</label>
             <input id="published" type="date" v-model="newBookObject.published">
           </td>
-          
+
           <td><button type="submit">Add book</button></td>
           
         </table>
