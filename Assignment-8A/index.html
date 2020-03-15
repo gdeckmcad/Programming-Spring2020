@@ -11,7 +11,7 @@
     <div id="myBooks" v-cloak>
     
     <h1>{{heading}}</h1>
-    <table class="list-container">
+    <table>
 
         <thead>
           <th>Title</th>
@@ -30,48 +30,51 @@
             <td>{{item.rating}}</td>
             <td>{{item.published}}</td>
             <td>
-              <button type="button" v-on:click="deleteItem(item)">Delete</button>
+              <button type="button" v-on:click="deleteItem(item)" class="secondary-button">Delete</button>
             </td>
           </tr>
         </tbody>
-        
       </table>
 
-      <form v-on:submit.prevent="submitHandler">
-        <fieldset>
-          <legend>Add a book to the collection</legend>
-          <table>
-            
-          <td>
-            <label for="title">Title</label>
-            <input id="title" type="text" v-model="newBookObject.title">
-          </td>
 
-          <td>
-            <label for="author">Author</label>
-            <input id="author" type="text" v-model="newBookObject.author">
-          </td>
+            <form v-on:submit.prevent="submitHandler">
+            <fieldset>
+            <legend>Add a book to the collection</legend>
 
-          <td>
-            <label for="image">Image</label>
-            <input id="image" type="text" v-model="newBookObject.image">
-          </td>
+              <table>
+                <tbody>
+                   <tr>
+                      <td>
+                        <label for="title">Title</label>
+                        <input id="title" type="text" v-model="newBookObject.title">
+                      </td>
 
-          <td>
-            <label for="rating">Rating</label>
-            <input id="rating" type="text" v-model="newBookObject.rating">
-          </td>
+                      <td>
+                        <label for="author">Author</label>
+                        <input id="author" type="text" v-model="newBookObject.author">
+                      </td>
 
-          <td>
-            <label for="published">Publish date</label>
-            <input id="published" type="date" v-model="newBookObject.published">
-          </td>
+                      <td>
+                        <label for="image">Image</label>
+                        <input id="image" type="text" v-model="newBookObject.image">
+                      </td>
 
-          <td><button type="submit">Add book</button></td>
-          
-        </table>
-        </fieldset>
-      </form>
+                      <td>
+                        <label for="rating">Rating</label>
+                        <input id="rating" type="text" v-model="newBookObject.rating">
+                      </td>
+
+                      <td>
+                        <label for="published">Publish date</label>
+                        <input id="published" type="date" v-model="newBookObject.published">
+                      </td>
+
+                      <td><button type="submit" class="primary-button">Add book</button></td>
+                    </tr>
+                 </tbody>
+                </table>
+            </fieldset>
+            </form>
     </div>
 
 

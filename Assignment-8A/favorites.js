@@ -4,39 +4,39 @@ var myBooks = [
         author:'JD Salinger',
         image: 'https://upload.wikimedia.org/wikipedia/commons/7/72/Frannyzoey.jpg',
         rating: '4.3 stars',
-        published:'May 1, 1991'
+        published:'05-01-1991'
     },
 
     {
         title:'Ghost World',
         author:'Daniel Clowes',
-        image: 'https://en.wikipedia.org/wiki/Franny_and_Zooey#/media/File:Frannyzoey.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/en/b/b9/Ghost_world.JPG',
         rating: '4.3 stars',
-        published:'February 10, 2015'
+        published:'02-10-2015'
     },
 
     {
         title:'The Opposite of Loneliness',
         author:'Marina Keegan',
-        image: 'https://en.wikipedia.org/wiki/Franny_and_Zooey#/media/File:Frannyzoey.jpg',
+        image: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1401056149l/18143905.jpg',
         rating: '4.4 stars',
-        published:'April 14, 2015'
+        published:'04-14-2015'
     },
 
     {
         title:'M Train',
         author:'Patti Smith',
-        image: 'https://en.wikipedia.org/wiki/Franny_and_Zooey#/media/File:Frannyzoey.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/en/b/b3/M_Train_%28book%29.jpg',
         rating: '4.5 stars',
-        published:'April 1, 2016'
+        published:'04-01-2016'
     },
 
     {
         title:'1Q84',
         author:'Haruki Murakami',
-        image: 'https://en.wikipedia.org/wiki/Franny_and_Zooey#/media/File:Frannyzoey.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/en/5/59/1Q84_%28United_States_edition%29.jpg',
         rating: '4.1 stars',
-        published:'January 22, 2013'
+        published:'01-22-2013'
     }
 ]
 
