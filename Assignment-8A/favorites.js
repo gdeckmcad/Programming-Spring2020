@@ -66,7 +66,12 @@ var myBookList = new Vue ({
                     pages: '',
                     rating: '',
                     published:''
-                }
+                };
+            },
+            deleteItem: item => {
+                myBookList.books = myBookList.books.filter(console => {
+                    return console !== item;
+                });
             }
         }
 })

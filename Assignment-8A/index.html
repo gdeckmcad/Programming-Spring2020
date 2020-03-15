@@ -29,7 +29,9 @@
             <td>{{item.pages}}</td>
             <td>{{item.rating}}</td>
             <td>{{item.published}}</td>
-            <td>delete</td>
+            <td>
+              <button type="button" v-on:click="deleteItem(item)">Delete</button>
+            </td>
           </tr>
         </tbody>
         
