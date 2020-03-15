@@ -28,12 +28,13 @@
             <td>{{item.pages}}</td>
             <td>{{item.rating}}</td>
             <td>{{item.published}}</td>
+            <td>delete</td>
           </tr>
         </tbody>
         
       </table>
 
-      <form v-on:submit="tbdFunction">
+      <form v-on:submit.prevent="submitHandler">
         <fieldset>
           <legend>Add a book to the collection</legend>
 
@@ -62,6 +63,7 @@
             <input id="published" type="date" v-model="newBookObject.published">
           </div>
 
+          <button type="submit">Add book</button>
         </fieldset>
       </form>
     </div>

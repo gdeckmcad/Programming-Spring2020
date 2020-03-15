@@ -44,6 +44,18 @@ var myBookList = new Vue ({
     el: '#myBooks',
     data : {
         books: myBooks,
-        heading: "My Favorite Books"
-    }
+        heading: "My Favorite Books",
+        newBookObject: {
+            title:'',
+            author:'',
+            pages: '',
+            rating: '',
+            published:''
+            }
+        },
+        methods: {
+            submitHandler: () => {
+                console.log('submitted');
+            }
+        }
 })
