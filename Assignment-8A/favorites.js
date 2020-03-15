@@ -4,7 +4,7 @@ var myBooks = [
         author:'JD Salinger',
         image: 'https://upload.wikimedia.org/wikipedia/commons/7/72/Frannyzoey.jpg',
         rating: '4.3 stars',
-        published:'05-01-1991'
+        published:'1991-05-01'
     },
 
     {
@@ -12,7 +12,7 @@ var myBooks = [
         author:'Daniel Clowes',
         image: 'https://upload.wikimedia.org/wikipedia/en/b/b9/Ghost_world.JPG',
         rating: '4.3 stars',
-        published:'02-10-2015'
+        published:'2015-02-10'
     },
 
     {
@@ -20,7 +20,7 @@ var myBooks = [
         author:'Marina Keegan',
         image: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1401056149l/18143905.jpg',
         rating: '4.4 stars',
-        published:'04-14-2015'
+        published:'2015-04-14'
     },
 
     {
@@ -28,7 +28,7 @@ var myBooks = [
         author:'Patti Smith',
         image: 'https://upload.wikimedia.org/wikipedia/en/b/b3/M_Train_%28book%29.jpg',
         rating: '4.5 stars',
-        published:'04-01-2016'
+        published:'2016-04-01'
     },
 
     {
@@ -36,7 +36,7 @@ var myBooks = [
         author:'Haruki Murakami',
         image: 'https://upload.wikimedia.org/wikipedia/en/5/59/1Q84_%28United_States_edition%29.jpg',
         rating: '4.1 stars',
-        published:'01-22-2013'
+        published:'2013-01-22'
     }
 ]
 
