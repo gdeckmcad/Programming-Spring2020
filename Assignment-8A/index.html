@@ -32,6 +32,38 @@
         </tbody>
         
       </table>
+
+      <form v-on:submit="tbdFunction">
+        <fieldset>
+          <legend>Add a book to the collection</legend>
+
+          <div>
+            <label for="title">Title</label>
+            <input id="title" type="text" v-model="newBookObject.title">
+          </div>
+
+          <div>
+            <label for="author">Author</label>
+            <input id="author" type="text" v-model="newBookObject.author">
+          </div>
+
+          <div>
+            <label for="pages">Pages</label>
+            <input id="pages" type="text" v-model="newBookObject.pages">
+          </div>
+
+          <div>
+            <label for="rating">Rating</label>
+            <input id="rating" type="number" v-model="newBookObject.rating">
+          </div>
+
+          <div>
+            <label for="published">Publish date</label>
+            <input id="published" type="date" v-model="newBookObject.published">
+          </div>
+
+        </fieldset>
+      </form>
     </div>
 
 
