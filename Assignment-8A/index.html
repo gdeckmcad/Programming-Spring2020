@@ -19,6 +19,7 @@
           <th>Pages</th>
           <th>Rating</th>
           <th>Publish date</th>
+          <th>Actions</th>
         </thead>
 
         <tbody>
@@ -50,12 +51,12 @@
 
           <div>
             <label for="pages">Pages</label>
-            <input id="pages" type="text" v-model="newBookObject.pages">
+            <input id="pages" type="number" v-model="newBookObject.pages">
           </div>
 
           <div>
             <label for="rating">Rating</label>
-            <input id="rating" type="number" v-model="newBookObject.rating">
+            <input id="rating" type="text" v-model="newBookObject.rating">
           </div>
 
           <div>

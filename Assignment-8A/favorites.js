@@ -56,6 +56,17 @@ var myBookList = new Vue ({
         methods: {
             submitHandler: () => {
                 console.log('submitted');
+                myBookList.books = myBookList.books.concat(myBookList.newBookObject);
+                myBookList.resetForm();
+            },
+            resetForm: () => {
+                myBookList.newBookObject = {
+                    title:'',
+                    author:'',
+                    pages: '',
+                    rating: '',
+                    published:''
+                }
             }
         }
 })
