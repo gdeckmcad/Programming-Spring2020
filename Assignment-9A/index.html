@@ -22,7 +22,7 @@
         </thead>
 
         <tbody>
-            <row-component></row-component>
+            <row-component v-for="item in books" v-bind:title="item.title" v-bind:author="item.author" v-bind:image="item.image" v-bind:rating="item.rating" v-bind:published="item.published"></row-component>
         </tbody>
       </table>
 
