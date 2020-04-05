@@ -1,3 +1,14 @@
+Vue.component('row-component', {
+    template: ' <tr> \
+                <td>{{title}}</td>\
+                <td>{{author}}</td>\
+                <td><img :src="image" :alt="title"></td>\
+                <td>{{rating}}</td>\
+                <td>{{published}}</td>\
+                </tr>',
+    props: ['title', 'author', 'image', 'rating', 'published']
+});
+
 var myBooks = [
     {
         title:'Franny and Zooey',
