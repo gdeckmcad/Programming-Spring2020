@@ -67,6 +67,14 @@ fieldset {
   padding: 0;
 }
 
+legend {
+  color: tomato;
+  font-family: 'Aleo', serif;
+  font-weight: 700;
+  font-size: 28px;
+  padding-top: 20px;
+}
+
 .form-grid {
   padding-top: 20px;
   display: inline-grid;
@@ -92,12 +100,23 @@ label {
   display: block;
 }
 
-legend {
-  color: tomato;
-  font-family: 'Aleo', serif;
-  font-weight: 700;
-  font-size: 28px;
-  padding-top: 20px;
+.primary-button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  height: 32px;
+  color: white;
+  background-color: mediumBlue;
+  border: none;
+  border-radius: 2px;
+  padding: 0px 20px 0px 20px;
+  margin-top: 20px;
+}
+
+.primary-button:hover {
+  background-color: darkblue;
+  text-decoration: underline;
 }
 
 .secondary-button {
@@ -115,24 +134,5 @@ legend {
 .secondary-button:hover {
   background-color: tomato;
   color: white;
-  text-decoration: underline;
-}
-
-.primary-button {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  text-transform: uppercase;
-  height: 32px;
-  color: white;
-  background-color: mediumBlue;
-  border: none;
-  border-radius: 2px;
-  padding: 0px 20px 0px 20px;
-  margin-top: 20px;
-}
-
-.primary-button:hover {
-  background-color: darkblue;
   text-decoration: underline;
 }
