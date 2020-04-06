@@ -7,61 +7,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <title>Grace's Favorite Books</title>
 </head>
+
 <body>
-    <div id="myBooks" v-cloak>
+<div id="myBooks" v-cloak>
     
     <h1>{{heading}}</h1>
-    <div class="heading">
-      <div class="heading-item">Title</div>
-      <div class="heading-item">Author</div>
-      <div class="heading-item">Cover</div>
-      <div class="heading-item">Rating</div>
-      <div class="heading-item">Publish date</div>
-    </div>
+      <div class="heading">
+        <div class="heading-item">Title</div>
+        <div class="heading-item">Author</div>
+        <div class="heading-item">Cover</div>
+        <div class="heading-item">Rating</div>
+        <div class="heading-item">Publish date</div>
+      </div>
 
     <row-component v-for="(item, index) in books" v-bind:class="{even: (index + 1) % 2 === 0, odd: (index + 1) % 2 !== 0}" v-bind:title="item.title" v-bind:author="item.author" v-bind:image="item.image" v-bind:rating="item.rating" v-bind:published="item.published"></row-component>
 
 
-            <form v-on:submit.prevent="submitHandler">
-            <fieldset>
-            <legend>Add a book to the collection</legend>
+    <form v-on:submit.prevent="submitHandler">
+      <fieldset>
+        <legend>Add a book to the collection</legend>
 
-              <table class="table-form">
-                <tbody>
-                   <tr>
-                      <td>
-                        <label for="title">Title</label>
-                        <input id="title" type="text" v-model="newBookObject.title" required>
-                      </td>
+          <div class="form-grid">
 
-                      <td>
-                        <label for="author">Author</label>
-                        <input id="author" type="text" v-model="newBookObject.author">
-                      </td>
+            <div>
+              <label for="title">Title</label>
+              <input id="title" type="text" v-model="newBookObject.title" required>
+            </div>
 
-                      <td>
-                        <label for="image">Image</label>
-                        <input id="image" type="text" v-model="newBookObject.image">
-                      </td>
+            <div>
+              <label for="author">Author</label>
+              <input id="author" type="text" v-model="newBookObject.author">
+            </div>
 
-                      <td>
-                        <label for="rating">Rating</label>
-                        <input id="rating" type="text" v-model="newBookObject.rating">
-                      </td>
+            <div>
+              <label for="image">Image</label>
+              <input id="image" type="text" v-model="newBookObject.image">
+             </div>
 
-                      <td>
-                        <label for="published">Publish date</label>
-                        <input id="published" type="date" v-model="newBookObject.published">
-                      </td>
+            <div>
+              <label for="rating">Rating</label>
+              <input id="rating" type="text" v-model="newBookObject.rating">
+            </div>
 
-                      <td><button type="submit" class="primary-button">Add book</button></td>
-                    </tr>
-                 </tbody>
-                </table>
-            </fieldset>
-            </form>
-    </div>
+            <div>
+              <label for="published">Publish date</label>
+              <input id="published" type="date" v-model="newBookObject.published">
+            </div>
+          </div>
 
+          <div>
+            <button type="submit" class="primary-button">Add book</button>
+          </div>
+
+      </fieldset>
+    </form>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="favorites.js"></script>

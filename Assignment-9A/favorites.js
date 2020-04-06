@@ -49,7 +49,7 @@ var myBooks = [
         rating: '4.1 stars',
         published:'2013-01-22'
     }
-]
+];
 
 var myBookList = new Vue ({
     el: '#myBooks',
@@ -64,6 +64,7 @@ var myBookList = new Vue ({
             published:''
             }
         },
+
         methods: {
             submitHandler: () => {
                 console.log('submitted');
@@ -77,8 +78,9 @@ var myBookList = new Vue ({
                     image: '',
                     rating: '',
                     published:''
-                };
-            },
+                }
+            }
 
         }
-})
+
+});
