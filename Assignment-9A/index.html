@@ -11,20 +11,16 @@
     <div id="myBooks" v-cloak>
     
     <h1>{{heading}}</h1>
-    <table>
+    <div class="heading">
+      <div class="heading-item">Title</div>
+      <div class="heading-item">Author</div>
+      <div class="heading-item">Cover</div>
+      <div class="heading-item">Rating</div>
+      <div class="heading-item">Publish date</div>
+    </div>
 
-        <thead>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Cover</th>
-          <th>Rating</th>
-          <th>Publish date</th>
-        </thead>
 
-        <tbody>
-            <row-component v-for="item in books" v-bind:title="item.title" v-bind:author="item.author" v-bind:image="item.image" v-bind:rating="item.rating" v-bind:published="item.published"></row-component>
-        </tbody>
-      </table>
+            <row-component v-for="(item, index) in books" v-bind:title="item.title" v-bind:author="item.author" v-bind:image="item.image" v-bind:rating="item.rating" v-bind:published="item.published"></row-component>
 
 
             <form v-on:submit.prevent="submitHandler">

@@ -1,11 +1,11 @@
 Vue.component('row-component', {
-    template: ' <tr> \
-                <td>{{title}}</td>\
-                <td>{{author}}</td>\
-                <td><img :src="image" :alt="title"></td>\
-                <td>{{rating}}</td>\
-                <td>{{published}}</td>\
-                </tr>',
+    template: ' <div class="row-grid">\
+                <div class="row-elements">{{title}}</div>\
+                <div class="row-elements">{{author}}</div>\
+                <div class="row-elements"><img :src="image" :alt="title"></div>\
+                <div class="row-elements">{{rating}}</div>\
+                <div class="row-elements">{{published}}</div>\
+                </div>',
     props: ['title', 'author', 'image', 'rating', 'published']
 });
 
