@@ -1,9 +1,10 @@
 Vue.component('streaming-track', {
     template: `<div class="track">
         <h3>{{track.title}}</h3>
-        <div><img src="" alt=""></div>
+        <div><img v-bind:src="track.cover" alt=""></div>
         <small>{{track.artist}}</small>   
-    </div>`
+    </div>`,
+    props: ['track']
 });
 
 const vm = new Vue({
