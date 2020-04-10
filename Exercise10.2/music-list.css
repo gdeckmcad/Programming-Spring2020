@@ -31,3 +31,16 @@ html {
     width: 100%;
     max-width: 53px;
 }
+
+.track.no-change {
+    border-color:blue;
+}
+
+.track.up {
+    border-color:green;
+
+}
+
+.track.down {
+    border-color:red;
+}
