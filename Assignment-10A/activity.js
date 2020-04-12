@@ -1,36 +1,35 @@
-Vue.component('streaming-track', {
-    template: `<div v-bind:class="['track', trending]">
-        <h3>{{track.title}}</h3>
-        <div><img v-bind:src="track.cover" alt=""></div>
-        <small>{{track.artist}}</small>   
-    </div>`,
-    props: ['track'],
-    computed: {
-        trending: function () {
-            const delta = this.track.rank - this.track.position.positionLastWeek;
-            if (delta > 0) {
-                return 'up'
-            } else if (delta < 0) {
-                return 'down'
-            } else {
-                return 'no-change'
-            }
-        }
-    }
+Vue.component('poke-card', {
+    template: `
+        <div>
+            <h3>{{cards.name}}</h3>
+            <div class="card-image"><img v-bind:src="cards.imageURL" v-bind:alt="cards.name"></div>
+        </div>
+        `,
+    props: ['name', 'imageURL'],
 });
 
 const vm = new Vue({
-    el: "#musicApp",
+    el: "#demoApp",
     data: {
-        tracks: []
+        searchQuery: '',
+        results: []
+    },
+    methods: {
+        searchCards: function () {
+            axios
+            .get('https://api.pokemontcg.io/v1/cards/', {params: {q: vm.searchQuery}})
+            .then(response => {
+                vm.results = response.data.data;
+            })
+        }
     },
     mounted () {
-        axios
-            .get('./data/music-list.json')
-            .then(response => {
-                console.log('response', response);
-                vm.tracks = response.data;
-                console.log(vm.tracks);
-            });
+        let query = {
+            q: 'Inkay'
+        }
+        axios.get('https://api.pokemontcg.io/v1/cards/', {params: query})
+        .then(response => {
+            console.log('response', response);
+        });
     }
 })
