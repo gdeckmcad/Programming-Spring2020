@@ -1,0 +1,38 @@
+body {
+    background-color: #716844;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 30px;
+    font-family: 'Lora', serif;
+    margin-bottom:10px;
+}
+
+.grid {
+    display: inline-grid;
+    grid-template-columns: 33% 33% 33%;
+    width: 100%;
+}
+
+.grid-item {
+    margin: 5px 30px 15px 30px;
+    color: #ffffff;
+    font-family: 'Lora', serif;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ffffff;
+}
+
+h4 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-style: italic;
+}
