@@ -1,29 +1,24 @@
-let angle = 0;
-let rotateBy = 5;
+var cwidth = 640
+var cheight = 400
+var row = 25
 
 function setup() {
-    createCanvas(600,600);
-    background('#CAFFFB');
-    angleMode(DEGREES);
-}
-
-function makeArm(rotateBy) {
-    let alt = Math.round(rotateBy / 45);
-    console.log(alt);
-    noFill();
-    stroke("#02066F");
-    strokeWeight(1);
-    triangle(150 + alt, 150, 150, 150, 150, 150 - alt);
-}
-
-
-function draw() {
-    translate(150,300);
-    rotate(rotateBy);
-    makeArm(rotateBy);
-    rotateBy += 5;
-}
-
-function mousePressed() {
-    noLoop();
+  createCanvas(cwidth, cheight);
+  for (x = 0; x <= width; x += row) {
+    for (y = 0; y <= height; y += row) {
+      //stroke(x - 100);
+      if ( y % 3 === 0) {
+        fill("#32BF84");
+        stroke("#048243");
+        strokeWeight(1);
+        triangle(x - 20, y, x + 20, y, x, y - 20);
+      }
+      else {
+        fill("#FE46A5");
+        noStroke();
+        circle(x, y + 15, 16)
+        
+      }
+    }
+  }
 }
