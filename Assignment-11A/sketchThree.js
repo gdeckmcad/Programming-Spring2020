@@ -1,11 +1,26 @@
 function setup() {
-  createCanvas(640, 480);
+  createCanvas(640, 480, WEBGL);
+  noFill();
 }
 
 function draw() {
-  clear();
-  fill("#CAFFFB");
+  background(255);
+  rotateY(mouseX / 4);
   stroke("#048243");
-  scale(1, mouseX * 1.3);
-  rect(0, 0, 640, 50);
+  strokeWeight(2);
+  box(200);
+  rotateY(mouseY / 6);
+  stroke("#32BF84");
+  box(100);
+  let rad = millis() / 1000;
+  // Set rotation angles
+  let ct = cos(rad);
+  let st = sin(rad);
+  // Matrix for rotation around the Y axis
+  applyMatrix(  ct, 0.0,  st,  0.0,
+               0.0, 1.0, 0.0,  0.0,
+               -st, 0.0,  ct,  0.0,
+               0.0, 0.0, 0.0,  1.0);
+  stroke("#BDF8A3");
+  box(50);
 }
