@@ -1,7 +1,3 @@
-var started = false
-var clickX = 0
-var clickY = 0
-
 function setup() {
   createCanvas(640, 480);
 }
