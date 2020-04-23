@@ -1,17 +1,13 @@
-var drink;
-//var fireplace;
-//var heartbeat;
+var heartbeat;
 
 function preload() {
-  drink = loadSound('wav/ice-cubes-glass-daniel_simon.wav');
-  //fireplace = loadSound ('wav/crackling-fireplace_daniel-simion.wav');
-  //heartbeat = loadSound('wav/human-heartbeat-daniel_simon.wav')
+  heart = loadSound('wav/human-heartbeat-daniel_simon.wav')
 }
 
 function setup() {
   createCanvas(500, 500, WEBGL);
   amplitude = new p5.Amplitude();
-  drink.play();
+  heart.play();
 }
 
 function draw() {
@@ -19,6 +15,6 @@ function draw() {
   strokeWeight(1);
   stroke('red');
   rotateY(millis() / level);
-  ellipsoid(90, 100, 100);
+  ellipsoid(150, 150, 150);
 
 }
