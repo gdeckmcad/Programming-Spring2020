@@ -9,11 +9,16 @@ function preload() {
 }
 
 function setup() {
-  drink.setVolume(0.1);
+  createCanvas(500, 500, WEBGL);
+  amplitude = new p5.Amplitude();
   drink.play();
 }
 
 function draw() {
-  
+  let level = amplitude.getLevel();
+  strokeWeight(1);
+  stroke('red');
+  rotateY(millis() / level);
+  ellipsoid(90, 100, 100);
 
 }
