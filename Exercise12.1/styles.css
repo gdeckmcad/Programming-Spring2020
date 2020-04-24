@@ -1,5 +1,14 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 50 50;
+}
+
 h1 {
-    margin-bottom: 8px;
+    margin-bottom: 0px;
+}
+
+p {
+    margin-top: 8px;
 }
 
 button {
@@ -11,8 +20,16 @@ button {
     font-size: 18px;
     text-transform: uppercase;
     border-radius:4px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
+    border: 1px solid #bababa;
+}
+
+button:hover {
+    border: 1px dashed #000000;
 }
 
 button span {
     padding-right: 8px;
+    padding-top:8px;
 }

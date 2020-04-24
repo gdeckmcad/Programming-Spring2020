@@ -1,24 +1,26 @@
+//this is loading the sound files on preload
 function preload() {
   heart = loadSound('wav/human-heartbeat-daniel_simon.wav')
   stomach = loadSound('wav/Stomach Growling-SoundBible.com-164767511.wav')
   lungs = loadSound('wav/Exhale-SoundBible.com-1772711989.wav')
 }
 
+//setting up 
 function setup() {
   createCanvas(500, 500, WEBGL);
   amplitude = new p5.Amplitude();
 }
 
+//this is capturing the level of the sound in the variable level and outputting the visual reprsentation of the sounds
 function draw() {
   let level = amplitude.getLevel();
   strokeWeight(1);
   stroke('red');
-  circleW = level * 1000
-  circleH = level * 1000
-  ellipse(0, 0, circleW, circleH);
+  circleX = level * 1000
+  ellipse(0, 0, circleX, circleX);
 }
 
-
+//these are the functions that are put on the buttons with the event onClick, letting them play their entirety so that they layer over each other
 function playHeart() {
   heart.play()
 }
