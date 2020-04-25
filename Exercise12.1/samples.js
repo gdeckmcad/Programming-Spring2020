@@ -7,7 +7,7 @@ function preload() {
 
 //setting up 
 function setup() {
-  createCanvas(500, 500, WEBGL);
+  createCanvas(500, 500);
   amplitude = new p5.Amplitude();
 }
 
