@@ -17,7 +17,7 @@ function draw() {
   strokeWeight(1);
   stroke('red');
   circleX = level * 1000
-  ellipse(0, 0, circleX, circleX);
+  ellipse(250, 250, circleX, circleX);
 }
 
 //these are the functions that are put on the buttons with the event onClick, letting them play their entirety so that they layer over each other
