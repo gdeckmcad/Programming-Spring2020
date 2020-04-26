@@ -9,7 +9,7 @@ function preload() {
 }
 
 
-//setup
+//setup with canvas and aplitude
 function setup() {
     createCanvas (1050, 500);
     amplitude = new p5.Amplitude();
@@ -17,6 +17,7 @@ function setup() {
 
 //Using mouseClicked to set up click targets for user interaction, leaving them play out so you can layer sounds on top of each other
 function mouseClicked () {
+
     //Click target for block one
     if ((mouseX >= 0 && mouseX <= 350) && (mouseY >= 0 && mouseY <= 250)) {
         blockOne.play()
@@ -49,7 +50,7 @@ function mouseClicked () {
 
 }
 
-//drawing the shapes and getting them set up in their quadrants
+//drawing the shapes and getting them set up in their quadrants with some movement based on level sizes
 function draw() {
     let level = amplitude.getLevel();
     let size = level * 500;
