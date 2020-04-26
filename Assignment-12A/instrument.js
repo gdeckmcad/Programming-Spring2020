@@ -8,11 +8,26 @@ function preload() {
     blockSix = loadSound('sounds/blockSix.wav')
 }
 
-
-//setup with canvas and aplitude
+//setup with canvas and amplitude, this is storing each sound byte in it's own amplitude variable
 function setup() {
     createCanvas (1050, 500);
-    amplitude = new p5.Amplitude();
+    amplitudeOne = new p5.Amplitude();
+    amplitudeOne.setInput(blockOne);
+
+    amplitudeTwo = new p5.Amplitude();
+    amplitudeTwo.setInput(blockTwo);
+
+    amplitudeThree = new p5.Amplitude();
+    amplitudeThree.setInput(blockThree);
+
+    amplitudeFour = new p5.Amplitude();
+    amplitudeFour.setInput(blockFour);
+
+    amplitudeFive = new p5.Amplitude();
+    amplitudeFive.setInput(blockFive);
+
+    amplitudeSix = new p5.Amplitude();
+    amplitudeSix.setInput(blockSix);
 }
 
 //Using mouseClicked to set up click targets for user interaction, leaving them play out so you can layer sounds on top of each other
@@ -50,10 +65,10 @@ function mouseClicked () {
 
 }
 
-//drawing the shapes and getting them set up in their quadrants with some movement based on level sizes
+//Carefully mapped out coordinates for the grid and shapes, had to store and call each level individually
 function draw() {
-    let level = amplitude.getLevel();
-    let size = level * 500;
+    let levelOne = amplitudeOne.getLevel();
+    let sizeOne = levelOne * 500;
 
     //block 1
     fill('#E65161');
@@ -62,7 +77,10 @@ function draw() {
     noFill();
     strokeWeight(4);
     stroke('#FFFFFF');
-    ellipse(175, 125, 160 + size,  160 + size);
+    ellipse(175, 125, 160 + sizeOne,  160 + sizeOne);
+
+    let levelTwo = amplitudeTwo.getLevel();
+    let sizeTwo = levelTwo * 500;    
 
     //block 2
     fill('#9CCD65');
@@ -71,8 +89,10 @@ function draw() {
     noFill();
     strokeWeight(4);
     stroke('#ffffff');
-    rect(454, 45, 160, 160, 1 * size, 1 * size);   
+    rect(454, 45, 160, 160, 1 * sizeTwo, 1 * sizeTwo);   
 
+    let levelThree = amplitudeThree.getLevel();
+    let sizeThree = levelThree * 500;   
 
     //block 3
     fill('#45C9A7');
@@ -81,8 +101,11 @@ function draw() {
     noFill();
     strokeWeight(4);
     stroke('#FFFFFF');
-    triangle(778, 206, 835 + size, 36, 948 + size, 149);
+    triangle(778, 206, 835 + sizeThree, 36, 948 + sizeThree, 149);
 
+    let levelFour = amplitudeFour.getLevel();
+    let sizeFour = levelFour * 500;   
+    
     //block 4
     fill('#4BB9E1');
     noStroke();
@@ -90,7 +113,10 @@ function draw() {
     noFill();
     strokeWeight(4);
     stroke('#ffffff');
-    rect(100, 310, 160 + size, 130 + size); 
+    rect(100, 310, 160 + sizeFour, 130 + sizeFour); 
+
+    let levelFive = amplitudeFive.getLevel();
+    let sizeFive = levelFive * 500;   
 
     //block 5
     fill('#F5C851');
@@ -99,7 +125,10 @@ function draw() {
     noFill();
     strokeWeight(4);
     stroke('#FFFFFF');
-    triangle(534 - size, 295 + size, 614 + size, 455 - size, 454 + size, 455 - size);    
+    triangle(534 - sizeFive, 295 + sizeFive, 614 + sizeFive, 455 - sizeFive, 454 + sizeFive, 455 - sizeFive);    
+
+    let levelSix = amplitudeSix.getLevel();
+    let sizeSix = levelSix * 500;   
 
      //block 6
      fill('#A68DE3');
@@ -108,6 +137,6 @@ function draw() {
      noFill();
      strokeWeight(4);
      stroke('#ffffff');
-     line(792 + size, 310, 992, 440);    
+     line(792 + sizeSix, 310, 992, 440);    
 
   }
