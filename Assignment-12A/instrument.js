@@ -61,16 +61,17 @@ function draw() {
     noFill();
     strokeWeight(4);
     stroke('#FFFFFF');
-    ellipse(175, 125, size, size);
+    ellipse(175, 125, 160 + size,  160 + size);
 
     //block 2
-    fill('#F5C851');
+    fill('#9CCD65');
     noStroke();
     rect(350, 0, 350, 250);
     noFill();
     strokeWeight(4);
-    stroke('#FFFFFF');
-    triangle(534, 45, 614, 205, 454, 205);
+    stroke('#ffffff');
+    rect(454, 45, 160, 160, 1 * size, 1 * size);   
+
 
     //block 3
     fill('#45C9A7');
@@ -79,7 +80,7 @@ function draw() {
     noFill();
     strokeWeight(4);
     stroke('#FFFFFF');
-    triangle(890, 45, 970, 205, 810, 205);
+    triangle(778, 206, 835 + size, 36, 948 + size, 149);
 
     //block 4
     fill('#4BB9E1');
@@ -88,16 +89,16 @@ function draw() {
     noFill();
     strokeWeight(4);
     stroke('#ffffff');
-    rect(100, 310, 160, 130);
+    rect(100, 310, 160 + size, 130 + size); 
 
     //block 5
-    fill('#9CCD65');
+    fill('#F5C851');
     noStroke();
     rect(350, 250, 350, 250);
     noFill();
     strokeWeight(4);
-    stroke('#ffffff');
-    rect(454, 295, 160, 160);    
+    stroke('#FFFFFF');
+    triangle(534 - size, 295 + size, 614 + size, 455 - size, 454 + size, 455 - size);    
 
      //block 6
      fill('#A68DE3');
@@ -106,5 +107,6 @@ function draw() {
      noFill();
      strokeWeight(4);
      stroke('#ffffff');
-     line(792, 310, 992, 440);    
+     line(792 + size, 310, 992, 440);    
+
   }
