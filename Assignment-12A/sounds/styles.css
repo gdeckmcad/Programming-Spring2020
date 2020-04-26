@@ -1,0 +1,39 @@
+body {
+    width: 1080px;
+    height: 500px;
+}
+
+#sound-grid {
+    display: inline-grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-column-gap: 0;
+    width: 100%;
+}
+
+.sound-target {
+    height:250px;
+}
+
+#block-1 {
+    background-color: #E65161;
+}
+
+#block-2 {
+    background-color: #F5C851;
+}
+
+#block-3 {
+    background-color: #45C9A7;
+}
+
+#block-4 {
+    background-color: #4BB9E1;
+}
+
+#block-5 {
+    background-color: #9CCD65;
+}
+
+#block-6 {
+    background-color: #A68DE3;
+}
