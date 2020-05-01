@@ -32,7 +32,6 @@ function draw() {
 
     //as many times as 10 goes into 360
     for (x = 0; x <= 360; x = x + 10) {
-        //curve(0, 10, 50, amplified2, amplified, 10, 10, 10)
         bezier(amplified, 20, amplified2, 10, amplified, 90, amplified2, 80);
         rotate(x)
     }
