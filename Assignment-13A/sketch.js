@@ -1,22 +1,26 @@
-var drop = [];
+//creating an array to allow for multiple rain drops
+var rainDrop = [];
+var pos;
 
 function setup() {
     createCanvas(500, 500);
     for (var i = 0; i < 200; i++) {
-        drop[i] = new Drop();
+        rainDrop[i] = new rainFall();
     }
+    pos = 0.0;
 }
 
+//drawing the droplets and running through loop
 function draw() {
     background('#F0F8FF');
     for (var i = 0; i < 200; i++) {
-        drop[i].show();
-        drop[i].update();
+        rainDrop[i].show();
+        rainDrop[i].update();
     }
 }
 
-//create new object
-function Drop() {
+//creating new object to create the rain fall
+function rainFall() {
     this.x = random(0, width);
     this.y = random(0, -height);
 
@@ -28,12 +32,15 @@ function Drop() {
 
     //speed
     this.update = function() {
-        this.y = this.y + 8;
+        this.speed = random(5, 15);
+        this.gravity = sin(pos);
+        this.y = this.y + this.speed * this.gravity;
 
         //repeating fall
         if (this.y > height) {
             this.y = random(0, -height);
+            this.gravity = 0;
         }
-    }
+}
     
 }

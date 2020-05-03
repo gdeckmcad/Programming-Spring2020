@@ -1,6 +1,7 @@
 var slider;
 var slider2;
 var pos;
+var pos2;
 
 function setup() {
     createCanvas(500, 500);
