@@ -35,13 +35,14 @@ function rainDrop() {
     this.x = random(0, height);
     this.y = random(0, amplitude);
 
+    //drawing the drops
     this.show = function() {
         noStroke();
         fill('#6495ED');
         ellipse(this.x, this.y, 2, 10);
     }
 
-    //speed
+    //making the drops move
     this.update = function() {
         this.speed = random(5, 15);
         this.gravity = 1.05;
