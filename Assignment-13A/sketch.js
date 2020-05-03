@@ -2,9 +2,16 @@
 var rainFall = [];
 var pos;
 
+//adding some rainfall noises
+function preload() {
+    rainSounds = loadSound('sounds/Rain-SoundBible.com-176235038.wav');
+}
+
 function setup() {
     createCanvas(500, 500);
     angleMode(DEGREES);
+    amplitudeOne = new p5.Amplitude();
+    amplitudeOne.setInput(rainSounds);
     for (var i = 0; i < 200; i++) {
         rainFall[i] = new rainDrop();
     }
@@ -13,6 +20,7 @@ function setup() {
 //drawing the droplets and running through loop
 function draw() {
     background('#F0F8FF');
+    rainSounds.play();
     for (var i = 0; i < 200; i++) {
         rainFall[i].show();
         rainFall[i].update();
