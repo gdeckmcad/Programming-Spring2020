@@ -10,8 +10,6 @@ function preload() {
 function setup() {
     createCanvas(500, 500);
     angleMode(DEGREES);
-    amplitudeOne = new p5.Amplitude();
-    amplitudeOne.setInput(rainSounds);
     for (var i = 0; i < 200; i++) {
         rainFall[i] = new rainDrop();
     }
