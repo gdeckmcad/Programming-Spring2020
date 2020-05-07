@@ -5,23 +5,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <title>Grace's List of Worldwide Public Holidays</title>
+    <title>Grace is figuring it out still</title>
 </head>
 <body>
-    <h1>Upcoming Worldwide Public Holidays</h1>
+    <h1>Grace is figuring it out still</h1>
 
     <div id="demoApp">
-        <div>
-            <label>Country <input v-model="country" /></label>
-          </div>
-          <div>
-            <label>Year <input v-model="year"></label>
-            <button type="button" v-on:click="getHolidays">Submit</button>
-          </div>
-          <div v-for="holiday in holidays">
-            <p>{{holiday.name}}</p>
-          </div>
-
+            <form v-on:submit.prevent="searchActivities">
+                <div>
+                    <label>How many participants?</label>
+                    <input v-model="searchQuery">
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            <h3>Results</h3>
+            <div v-for="activity in results">{{activity.activity}}</div>
     </div>
 
     <script src="script.js"></script>
