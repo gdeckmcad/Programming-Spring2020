@@ -11,7 +11,16 @@
     <h1>Upcoming Worldwide Public Holidays</h1>
 
     <div id="demoApp">
-
+        <div>
+            <label>Country <input v-model="country" /></label>
+          </div>
+          <div>
+            <label>Year <input v-model="year"></label>
+            <button type="button" v-on:click="getHolidays">Submit</button>
+          </div>
+          <div v-for="holiday in holidays">
+            <p>{{holiday.name}}</p>
+          </div>
 
     </div>
 
