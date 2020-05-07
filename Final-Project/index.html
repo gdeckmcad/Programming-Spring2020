@@ -19,7 +19,7 @@
                 <button type="submit">Submit</button>
             </form>
             <h3>Results</h3>
-            <div v-for="activity in results">{{activity.activity}}</div>
+            <activity-card v-for="activity in results" v-bind:activity="activity"></activity-card>
     </div>
 
     <script src="script.js"></script>

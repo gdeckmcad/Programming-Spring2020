@@ -1,3 +1,14 @@
+Vue.component('activity-card', {
+    template: `
+    <div>
+        <h3>{{activity.activity}}</h3>
+        <p>{{activity.participants}}</p>
+        <p>{{activity.type}}</p>
+    </div>
+    `,
+    props: ['activity']
+});
+
 const vm = new Vue({
     el: '#demoApp',
     data: {
@@ -13,13 +24,5 @@ const vm = new Vue({
                 })
         }
     },
-    mounted () {
-        let query = {
-            participants: '4'
-        }
-        axios.get('http://www.boredapi.com/api/activity', {params: query})
-        .then(response => {
-            console.log('response', response);
-        });
-    }
+
 })
