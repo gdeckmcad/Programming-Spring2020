@@ -4,7 +4,7 @@ const vm = new Vue({
 
     },
     mounted () {
-        axios.get('https://date.nager.at/Api/v2/NextPublicHolidaysWorldwide')
+        axios.get('https://www.boredapi.com/api/activity?type=recreational')
         .then(response => {
             console.log('response', response);
         });
