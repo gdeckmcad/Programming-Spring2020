@@ -1,3 +1,7 @@
+//daily timestamp
+var d = new Date();
+document.getElementById("datetime").innerHTML = d.toDateString();
+
 //quote component
 Vue.component('quote-card', {
     template: `

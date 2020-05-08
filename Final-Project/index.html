@@ -5,13 +5,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <title>Grace is figuring it out still</title>
+    <title>Grace's Daily COVID Help</title>
 </head>
 <body>
-    <h1>Grace is figuring it out still</h1>
+    <h1>Hello,</h1>
+
+    <p>Today is:</p>
+    <p><span id="datetime"></span></p>
 
     <div id="inspQuote">
-
         <quote-card v-for="quote in quotes" v-bind:quote="quote"></quote-card>
     </div>
 
@@ -21,7 +23,7 @@
                     <label>How many participants?</label>
                     <input v-model="searchQuery">
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit">Go</button>
             </form>
             <activity-card v-for="activity in results" v-bind:activity="activity"></activity-card>
     </div>
