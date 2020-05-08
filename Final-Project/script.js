@@ -36,13 +36,17 @@ const quo = new Vue({
 Vue.component('activity-card', {
     template: `
     <div>
-        <h3>{{activity.activity}}</h3>
-        <p>{{activity.participants}}</p>
-        <p>{{activity.type}}</p>
+        <p>{{activity}}</p>
+        <p>Participants: {{participants}}</p>
+        <p>Type: {{type}}</p>
     </div>
     `,
-    props: ['activity']
+    props: ['activity', 'participants', 'type']
 });
+
+// create a new element
+const heading = document.createElement('p');
+heading.innerHTML = 'Participants:';
 
 //bored api, generates random activities
 const vm = new Vue({

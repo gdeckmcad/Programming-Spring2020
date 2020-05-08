@@ -5,19 +5,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <title>Grace's Daily COVID Help</title>
+    <title>Grace's COVID Help Page</title>
 </head>
 <body>
     <h1>Hello,</h1>
-
-    <p>Today is:</p>
+    <p class="eyebrow-header">Today is:</p>
     <p><span id="datetime"></span></p>
 
-    <div id="inspQuote">
+    <div id="inspQuote" v-cloak>
+        <p class="eyebrow-header">Quote of the day:</p>
         <quote-card v-for="quote in quotes" v-bind:quote="quote"></quote-card>
     </div>
 
-    <div id="demoApp">
+    <div id="demoApp" v-cloak>
+        <p class="eyebrow-header">Find something to do:</p>
             <form v-on:submit.prevent="searchActivities">
                 <div>
                     <label>How many participants?</label>
@@ -25,7 +26,13 @@
                 </div>
                 <button type="submit">Go</button>
             </form>
-            <activity-card v-for="activity in results" v-bind:activity="activity"></activity-card>
+            <activity-card
+                v-for="item in results"
+                v-bind:activity="item.activity"
+                v-bind:participants="item.participants"
+                v-bind:type="item.type"
+                class="card">
+            </activity-card>
     </div>
 
     <script src="script.js"></script>
