@@ -44,10 +44,6 @@ Vue.component('activity-card', {
     props: ['activity', 'participants', 'type']
 });
 
-// create a new element
-const heading = document.createElement('p');
-heading.innerHTML = 'Participants:';
-
 //bored api, generates random activities
 const vm = new Vue({
     el: '#demoApp',
