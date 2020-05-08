@@ -13,7 +13,7 @@ Vue.component('quote-card', {
     props: ['body', 'author']
 });
 
-//FavQs api, inspirational quote of the day
+//FavQs api, this is pulling in the quote of the day
 var baseURL = "https://favqs.com/api/"
 const quo = new Vue({
     el: "#inspQuote",
@@ -42,14 +42,14 @@ Vue.component('activity-card', {
     props: ['activity']
 });
 
-//bored api, generates random activities
+//bored api, this is generating the random activity
 const vm = new Vue({
     el: '#demoApp',
     data: {
         searchQuery: '',
         results: []
     },
-//creating search query around number of participants
+//This is creating search method around number of participants
     methods: {
         searchActivities: function() {
             axios
