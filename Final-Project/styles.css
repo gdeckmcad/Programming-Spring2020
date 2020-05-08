@@ -47,7 +47,7 @@ a:hover {
     color: #E6E6E6;
     margin-top: 0;
     margin-bottom: 48px;
-    letter-spacing: .15em;
+    letter-spacing: .07em;
 }
 
 .eyebrow-header {
@@ -83,7 +83,7 @@ a:hover {
     color: #E6E6E6;
     text-transform: uppercase;
     margin-top: 12px;
-    letter-spacing: .15em;
+    letter-spacing: .07em;
 }
 
 .detail {
@@ -92,7 +92,8 @@ a:hover {
     font-weight: 300;
     color: #E6E6E6;
     margin-top: 12px;
-    letter-spacing: .15em;
+    letter-spacing: .07em;
+    line-height: 28px;
 }
 
 #demoApp {
