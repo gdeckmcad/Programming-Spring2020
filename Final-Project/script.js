@@ -1,4 +1,4 @@
-//activity component
+//quote component
 Vue.component('quote-card', {
     template: `
     <div>
@@ -19,7 +19,6 @@ const quo = new Vue({
     methods: {
        getQuote: function () {
            axios.get(baseURL + "/qotd").then(function(response){
-               console.log(response);
                quo.quotes = response.data;
            })
         }
