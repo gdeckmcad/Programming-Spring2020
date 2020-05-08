@@ -36,12 +36,10 @@ const quo = new Vue({
 Vue.component('activity-card', {
     template: `
     <div>
-        <p>{{activity}}</p>
-        <p>Participants: {{participants}}</p>
-        <p>Type: {{type}}</p>
+        <h3>{{activity}}</h3>
     </div>
     `,
-    props: ['activity', 'participants', 'type']
+    props: ['activity']
 });
 
 //bored api, generates random activities

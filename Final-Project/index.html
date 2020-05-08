@@ -28,19 +28,18 @@
     </div>
 
     <div id="demoApp" v-cloak>
-        <p class="eyebrow-header">Need something to do?</p>
+        <p class="eyebrow-header">Random Activity Generator</p>
+        <p class="detail">Remember to practice <a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/social-distancing.html" target="_blank">social distancing</a> while doing these activities.</p>
             <form v-on:submit.prevent="searchActivities">
                 <div>
-                    <label>How many participants?</label>
+                    <label>How many people?</label>
                     <input v-model="searchQuery">
                 </div>
-                <button type="submit">Go</button>
+                <button type="submit">GO!</button>
             </form>
             <activity-card
                 v-for="item in results"
                 v-bind:activity="item.activity"
-                v-bind:participants="item.participants"
-                v-bind:type="item.type"
                 class="card">
             </activity-card>
     </div>
