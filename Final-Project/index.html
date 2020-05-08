@@ -10,6 +10,10 @@
 <body>
     <h1>Grace is figuring it out still</h1>
 
+    <div id="inspQuote">
+        <daily-quote v-for="quote in quote" v-bind:quote="quote"></daily-quote>
+    </div>
+
     <div id="demoApp">
             <form v-on:submit.prevent="searchActivities">
                 <div>
@@ -18,7 +22,6 @@
                 </div>
                 <button type="submit">Submit</button>
             </form>
-            <h3>Results</h3>
             <activity-card v-for="activity in results" v-bind:activity="activity"></activity-card>
     </div>
 
