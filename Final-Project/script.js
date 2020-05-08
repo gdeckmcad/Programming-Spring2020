@@ -6,11 +6,11 @@ document.getElementById("datetime").innerHTML = d.toDateString();
 Vue.component('quote-card', {
     template: `
     <div>
-        <h3>{{quote.body}}</h3>
-        <p>{{quote.author}}</p>
+        <h3>{{body}}</h3>
+        <p class="author">{{author}}</p>
     </div>
     `,
-    props: ['quote']
+    props: ['body', 'author']
 });
 
 //FavQs api, inspirational quote of the day

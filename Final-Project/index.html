@@ -5,20 +5,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <title>Grace's COVID Help Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <title>Grace's COVID Page</title>
 </head>
 <body>
-    <h1>Hello,</h1>
+
+    <h1>hello,</h1>
+    <p class="intro">Quarantine brain is real, here are a few things to help.</p>
+    <div class="date">
     <p class="eyebrow-header">Today is:</p>
     <p><span id="datetime"></span></p>
+    </div>
 
     <div id="inspQuote" v-cloak>
         <p class="eyebrow-header">Quote of the day:</p>
-        <quote-card v-for="quote in quotes" v-bind:quote="quote"></quote-card>
+        <quote-card
+            v-for="quote in quotes"
+            v-bind:body="quote.body"
+            v-bind:author="quote.author">
+        </quote-card>
     </div>
 
     <div id="demoApp" v-cloak>
-        <p class="eyebrow-header">Find something to do:</p>
+        <p class="eyebrow-header">Need something to do?</p>
             <form v-on:submit.prevent="searchActivities">
                 <div>
                     <label>How many participants?</label>
@@ -36,5 +46,6 @@
     </div>
 
     <script src="script.js"></script>
+
 </body>
 </html>
