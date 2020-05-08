@@ -11,7 +11,8 @@
     <h1>Grace is figuring it out still</h1>
 
     <div id="inspQuote">
-        <daily-quote v-for="quote in quote" v-bind:quote="quote"></daily-quote>
+
+        <quote-card v-for="quote in quotes" v-bind:quote="quote"></quote-card>
     </div>
 
     <div id="demoApp">

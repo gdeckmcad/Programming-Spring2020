@@ -1,6 +1,6 @@
-//daily quote component
-vue.component('daily-quote', {
-    template:`
+//activity component
+Vue.component('quote-card', {
+    template: `
     <div>
         <h3>{{quote.body}}</h3>
         <p>{{quote.author}}</p>
@@ -14,13 +14,13 @@ var baseURL = "https://favqs.com/api/"
 const quo = new Vue({
     el: "#inspQuote",
     data: {
-        quote: []
+        quotes: []
     },
     methods: {
        getQuote: function () {
            axios.get(baseURL + "/qotd").then(function(response){
                console.log(response);
-               quo.quote = response.data;
+               quo.quotes = response.data;
            })
         }
     },
@@ -28,7 +28,6 @@ const quo = new Vue({
         this.getQuote();
     }
 });
-
 
 //activity component
 Vue.component('activity-card', {
