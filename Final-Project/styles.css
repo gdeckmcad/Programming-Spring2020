@@ -121,8 +121,7 @@ input {
 }
 
 input:focus {
-    border: 1px solid #D89A36;
-    outline: none;
+    outline: 2px solid #D89A36;
 }
 
 button {
@@ -145,6 +144,5 @@ button:hover {
 }
 
 button:focus {
-    outline: none;
-    border: 1px solid #F0DDDD;
+    outline: 1px solid #F0DDDD;
 }

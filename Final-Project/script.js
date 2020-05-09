@@ -46,7 +46,7 @@ Vue.component('activity-card', {
 const vm = new Vue({
     el: '#demoApp',
     data: {
-        searchQuery: '',
+        searchQuery: '1',
         results: []
     },
 //This is creating search method around number of participants
