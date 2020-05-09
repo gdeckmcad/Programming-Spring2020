@@ -5,11 +5,11 @@ document.getElementById("datetime").innerHTML = d.toDateString();
 //quote component
 Vue.component('quote-card', {
     template: `
-    <div>
-        <h3>{{body}}</h3>
-        <p class="author">{{author}}</p>
-    </div>
-    `,
+        <div>
+            <h3>{{body}}</h3>
+            <p class="author">{{author}}</p>
+        </div>
+        `,
     props: ['body', 'author']
 });
 
@@ -35,10 +35,10 @@ const quo = new Vue({
 //activity component
 Vue.component('activity-card', {
     template: `
-    <div>
-        <h3>{{activity}}</h3>
-    </div>
-    `,
+        <div>
+            <h3>{{activity}}</h3>
+        </div>
+        `,
     props: ['activity']
 });
 
