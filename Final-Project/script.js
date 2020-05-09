@@ -53,7 +53,7 @@ const vm = new Vue({
     methods: {
         searchActivities: function() {
             axios
-                .get('http://www.boredapi.com/api/activity', {params: {participants: vm.searchQuery}})
+                .get('https://www.boredapi.com/api/activity', {params: {participants: vm.searchQuery}})
                 .then(response => {
                     vm.results = response;
                 })
